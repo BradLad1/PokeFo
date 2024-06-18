@@ -30,7 +30,6 @@ body{
     top: 274px;
     left: 676px;
     z-index: 1;
-    transition: 2s;
 
 }
 
@@ -170,7 +169,14 @@ body{
 
 /*=============================================ANIMATION========================================================*/
 
-/*MEDIA QUERY*/
+/*========================MEDIA QUERY===========================*/
+@media screen and (max-width: 640px){
+    body{
+        background-color: blue;
+    }
+}
+
+
 @media screen and (max-width: 600px){
     body{
         background-color: rgb(28, 28, 29);
@@ -197,7 +203,7 @@ body{
         top: 264px;
         left: 640px;
         z-index: 1;
-        transition: 2s;
     
     }
 }
+/*=========================MEDIA QUERY=================================*/

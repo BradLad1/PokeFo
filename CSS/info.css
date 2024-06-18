@@ -169,3 +169,35 @@ body{
 
 
 /*=============================================ANIMATION========================================================*/
+
+/*MEDIA QUERY*/
+@media screen and (max-width: 600px){
+    body{
+        background-color: rgb(28, 28, 29);
+    }
+    .top-part{
+        position: absolute;
+        top:110px;
+    
+    }
+    
+    .bottom-part{
+        position: absolute;
+        top: 326px;
+        left: 460px;
+        /*bottom part that will come apart*/
+    }
+
+    .poke-btn{
+        border-radius: 70%; /* Ensures the element is a perfect circle */
+         /* Adjust the padding as needed */
+        width: 140px; /* Set the width and height to be equal */
+        height: 123px; /* Set the width and height to be equal */
+        position: absolute;
+        top: 264px;
+        left: 640px;
+        z-index: 1;
+        transition: 2s;
+    
+    }
+}

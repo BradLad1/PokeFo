@@ -389,28 +389,24 @@ if(data.id >0 && data.id <=151 ){
     origin_game.style.fontSize = "27px"
     origin_game.style.color="white"
     origin_game.style.fontWeight = "bold";
-
     console.log("worked")
  } else if(data.id >=152 && data.id <=251){
     origin_game.textContent ="Generation II"
     origin_game.style.fontSize = "27px"
     origin_game.style.color="white"
     origin_game.style.fontWeight = "bold";
-
     console.log("worked")
 } else if(data.id >=252 && data.id <=386){
     origin_game.textContent ="Generation III"
     origin_game.style.fontSize = "27px"
     origin_game.style.color="white"
     origin_game.style.fontWeight = "bold";
-
     console.log("worked")
 }else if(data.id >=387 && data.id <=493){
     origin_game.textContent ="Generation IV"
     origin_game.style.fontSize = "27px"
     origin_game.style.color="white"
     origin_game.style.fontWeight = "bold";
-
     console.log("worked")
 }else if(data.id >=494 && data.id <=649){
     origin_game.textContent ="Generation V"
@@ -425,35 +421,41 @@ if(data.id >0 && data.id <=151 ){
     origin_game.style.fontWeight = "bold";
     console.log("worked")
 }else if(data.id >=722 && data.id <=807){
-    //MELTAN CODE
-    if(data.id ==808 ){
-        origin_game.textContent =" Pokémon: Let's Go Pikachu/Eevee"
-        origin_game.style.fontSize = "27px"
-        origin_game.style.color="white"
-        origin_game.style.fontWeight = "bold";
-        console.log("worked")
-    }if(data.id ==809 ){
-        origin_game.textContent =" Pokémon: Let's Go Pikachu/Eevee"
-        origin_game.style.fontSize = "27px"
-        origin_game.style.color="white"
-        origin_game.style.fontWeight = "bold";
-        console.log("worked")
-    //MELTAN CODE
-}else if(data.id >=810 && data.id <=905){
     origin_game.textContent ="Generation VII"
     origin_game.style.fontSize = "27px"
     origin_game.style.color="white"
     origin_game.style.fontWeight = "bold";
     console.log("worked")
-}else if(data.id >=906 && data.id <=1026){
+}else if(data.id >=810 && data.id <=905){
     origin_game.textContent ="Generation VIII"
+    origin_game.style.fontSize = "27px"
+    origin_game.style.color="white"
+    origin_game.style.fontWeight = "bold";
+    console.log("worked")
+}else if(data.id >=906 && data.id <=1026){
+    origin_game.textContent ="Generation XI"
     origin_game.style.fontSize = "27px"
     origin_game.style.color="white"
     origin_game.style.fontWeight = "bold";
     console.log("worked")
 }//This code will give the genaration of the pokemon depending on their id
 
+ //MELTAN CODE
+ else if(data.id ==808 ){
+    origin_game.textContent =" Pokémon: Let's Go Pikachu/Eevee"
+    origin_game.style.fontSize = "27px"
+    origin_game.style.color="white"
+    origin_game.style.fontWeight = "bold";
+    console.log("worked")
+}else if(data.id ==809 ){
+    origin_game.textContent =" Pokémon: Let's Go Pikachu/Eevee"
+    origin_game.style.fontSize = "27px"
+    origin_game.style.color="white"
+    origin_game.style.fontWeight = "bold";
+    console.log("worked")
 }
+//MELTAN CODE
+
  } catch(error){
         console.error(error)
     }

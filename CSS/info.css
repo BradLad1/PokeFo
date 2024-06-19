@@ -169,41 +169,103 @@ body{
 
 /*=============================================ANIMATION========================================================*/
 
-/*========================MEDIA QUERY===========================*/
-@media screen and (max-width: 640px){
-    body{
-        background-color: blue;
-    }
-}
+/*========================================MEDIA QUERY======================================*/
 
 
-@media screen and (max-width: 600px){
+
+@media screen and (max-width: 590px){
     body{
         background-color: rgb(28, 28, 29);
     }
     .top-part{
         position: absolute;
-        top:110px;
-    
+        top:105px;
+        width: 530px;
     }
     
     .bottom-part{
         position: absolute;
-        top: 326px;
+        top: 322px;
         left: 460px;
         /*bottom part that will come apart*/
+        width: 530px;
+    }
+
+    #pokeget-btn{
+        position: absolute;
+        outline: none;
+        border: none;
+        border-radius: 50%;
+        bottom: 120px;
+        left: 230px;
+        background-color: white;
+        font-size: 18px;
+        padding: 20px;
+    }
+
+    .pokeget-random{
+        position: absolute;
+        outline: none;
+        border: none;
+        border-radius: 50%;
+        bottom: 200px;
+        left: 224px;
+        background-color: white;
+        font-size: 18px;
+        padding: 20px;
     }
 
     .poke-btn{
         border-radius: 70%; /* Ensures the element is a perfect circle */
          /* Adjust the padding as needed */
-        width: 140px; /* Set the width and height to be equal */
-        height: 123px; /* Set the width and height to be equal */
+        width: 149px; /* Set the width and height to be equal */
+        height: 117px; /* Set the width and height to be equal */
         position: absolute;
-        top: 264px;
-        left: 640px;
+        top: 270px;
+        left: 651px;
         z-index: 1;
-    
     }
 }
-/*=========================MEDIA QUERY=================================*/
+
+
+@media screen and (max-width: 569px){
+    body{
+        background-color: rgb(28, 28, 29);
+    }
+    .poke-btn{
+        border-radius: 70%; /* Ensures the element is a perfect circle */
+         /* Adjust the padding as needed */
+        width: 145px; /* Set the width and height to be equal */
+        height: 122px; /* Set the width and height to be equal */
+        position: absolute;
+        top: 265px;
+        left: 648px;
+        z-index: 1;
+    }
+
+    #pokeget-btn{
+        position: absolute;
+        outline: none;
+        border: none;
+        border-radius: 50%;
+        bottom: 120px;
+        left: 310px;
+        background-color: white;
+        font-size: 18px;
+        padding: 20px;
+    }
+
+    .pokeget-random{
+        position: absolute;
+        outline: none;
+        border: none;
+        border-radius: 50%;
+        bottom: 200px;
+        left: 304px;
+        background-color: white;
+        font-size: 18px;
+        padding: 20px;
+    }
+    
+}
+/*========================================MEDIA QUERY======================================*/

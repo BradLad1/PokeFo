@@ -235,8 +235,8 @@ body{
 
     .top-part{
         position: absolute;
-        top:114px;
-        left: 50px;
+        top:134px;
+        left: 10px;
         width: 300px;
         /*top part that will come apart*/
     
@@ -245,7 +245,7 @@ body{
     .bottom-part{
         position: absolute;
         top: 257px;
-        left: 50px;
+        left: 10px;
         width: 300px;
         /*bottom part that will come apart*/
     }

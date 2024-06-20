@@ -228,7 +228,7 @@ body{
 }
 
 
-@media screen and (max-width: 569px){
+@media screen and (max-width: 360px){
     body{
         background-color: rgb(28, 28, 29);
     }
@@ -237,7 +237,7 @@ body{
         position: absolute;
         top:154px;
         left: 80px;
-        width: 400px;
+        width: 200px;
         /*top part that will come apart*/
     
     }
@@ -246,7 +246,7 @@ body{
         position: absolute;
         top: 327px;
         left: 80px;
-        width: 400px;
+        width: 200px;
         /*bottom part that will come apart*/
     }
 

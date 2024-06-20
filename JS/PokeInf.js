@@ -30,7 +30,8 @@ const btnCustom = document.querySelector(".btn-custom")
 
 
 //Random Button
-const RandomBtn = document.getElementById("pokeget-random")
+const RandomBtn = document.getElementById("pokeget-random")//For the random button
+const RandomBtnContainer=document.getElementById("RandomBtnContainer") //Will be used for the span to hold randomContainer
 //Used to get a random pokemon
 //Random Button
 
@@ -307,7 +308,6 @@ for (let i = 0; i < stat_list.length; i++) {
 
     // Get the corresponding stat element based on the loop index
     let statElement;
-
     switch (i) {
         case 0:
             statElement = hp;
@@ -330,8 +330,6 @@ for (let i = 0; i < stat_list.length; i++) {
         default:
             break;
     }
- 
-
     // Add the progresss class and set the width
 if (statElement) {
     statElement.classList.add("progresss");
@@ -363,9 +361,13 @@ data.moves.forEach(Move=>{
     li.style.textAlign="center"
     console.log(Move.move)
 })
-
-
 //MOVES
+
+
+RandomBtn.remove()//Remove the random btn when we get an a infocard
+
+//Remove randdom class
+
 
 
 //Weight of pokemon
@@ -379,7 +381,7 @@ p.style.color = "white";
 WeightOfPokemon.appendChild(p)
 //Weight of pokemon
 
-spanHolderForbtn.innerHTML = '<button style="z-index: 1;" onclick="resetPokemonInfo()"  class="pokeget-random2" id="GoBackToMenu">Go Back</button>';//Create the go back button'; // create the go back button
+spanHolderForbtn.innerHTML = '<button style="z-index: 1;" onclick="resetPokemonInfo()"  class="pokeget-GoBack" id="GoBackToMenu">Go Back</button>';//Create the go back button'; // create the go back button
 spanHolderForSearch.innerHTML=""
 //progress section 
 //Generation of pokemon
@@ -496,12 +498,13 @@ function resetPokemonInfo() {
     speed.style.width = "0%";
     WeightOfPokemon.innerHTML = '<p style="font-size: 28px; text-decoration: underline;"><b>  <i>Weight</i></b></p>'; // Clear weight
     origin_game.textContent = ""; // Clear origin game
-    spanHolderForbtn.innerHTML = ""//clear button
+    spanHolderForbtn.innerHTML = '<button style="z-index: 1;" class="change-size" id="pokeget-btn">Search</button>'//clear button
+    RandomBtnContainer.innerHTML='<button style="z-index: 1;" id="pokeget-random" class="pokeget-random">Random</button>'//Will put back the Random btn
     dexbody.classList.remove("dex-body");
     dexbody.classList.remove("anim-square");
     dexbody.classList.add("hide-away");
     // Restore the Get Pokemon button
-    setEverythingBack.appendChild(getpokemonbtn);
+
 }
 //WILL RESET ALL THE INFOMATION BACK TO THE START
 

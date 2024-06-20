@@ -43,8 +43,8 @@ body{
     outline: none;
     border: none;
     border-radius: 50%;
-    bottom: 120px;
-    left: 100px;
+    bottom: -100px;
+    left: 230px;
     background-color: white;
     font-size: 18px;
     padding: 20px;
@@ -63,8 +63,8 @@ body{
     outline: none;
     border: none;
     border-radius: 50%;
-    bottom: 120px;
-    left: 94px;
+    bottom: -100px;
+    left: 130px;
     background-color: white;
     font-size: 18px;
     padding: 20px;
@@ -84,8 +84,8 @@ body{
     outline: none;
     border: none;
     border-radius: 50%;
-    bottom: 200px;
-    left: 94px;
+    bottom: 10px;
+    left: 130px;
     background-color: white;
     font-size: 18px;
     padding: 20px;
@@ -202,14 +202,13 @@ body{
         font-size: 18px;
         padding: 20px;
     }
-
     .pokeget-random{
-        position: absolute;
+        position: relative;
         outline: none;
         border: none;
         border-radius: 50%;
         bottom: 200px;
-        left: 224px;
+        left: 94px;
         background-color: white;
         font-size: 18px;
         padding: 20px;
@@ -243,25 +242,24 @@ body{
         z-index: 1;
     }
 
-    #pokeget-btn{
-        position: absolute;
-        outline: none;
-        border: none;
-        border-radius: 50%;
-        bottom: 120px;
-        left: 310px;
-        background-color: white;
-        font-size: 18px;
-        padding: 20px;
-    }
-
     .pokeget-random{
-        position: absolute;
+        position: relative;
         outline: none;
         border: none;
         border-radius: 50%;
         bottom: 200px;
-        left: 304px;
+        left: 94px;
+        background-color: white;
+        font-size: 18px;
+        padding: 20px;
+    }
+    .pokeget-random{
+        position: relative;
+        outline: none;
+        border: none;
+        border-radius: 50%;
+        bottom: 200px;
+        left: 94px;
         background-color: white;
         font-size: 18px;
         padding: 20px;

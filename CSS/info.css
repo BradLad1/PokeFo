@@ -244,7 +244,7 @@ body{
     
     .bottom-part{
         position: absolute;
-        top: 227px;
+        top: 257px;
         left: 50px;
         width: 300px;
         /*bottom part that will come apart*/
@@ -267,22 +267,22 @@ body{
         outline: none;
         border: none;
         border-radius: 50%;
-        bottom: 100px;
+        bottom: 10px;
         left: 80px;
         background-color: white;
-        font-size: 18px;
-        padding: 22px;
+        font-size: 11px;
+        padding: 12px;
     }
     .pokeget-random{
         position: relative;
         outline: none;
         border: none;
         border-radius: 50%;
-        bottom: 20px;
+        bottom:40px;
         left: -19px;
         background-color: white;
-        font-size: 18px;
-        padding: 20px;
+        font-size: 11px;
+        padding: 12px;
     }
     
     

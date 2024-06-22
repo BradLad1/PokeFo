@@ -481,7 +481,6 @@ function resetPokemonInfo() {
     abilitylist.innerHTML = '<b><i style="font-size: 28px; text-decoration: underline;" >Abilites</i></b>' 
     poketype.innerHTML = '<p style="font-size: 28px;text-decoration: underline;"> <b><i>Types</i><b> </p>'; // Clear the pokemon types
     baseaddtotal.innerText = ""; // Reset base total text
-    stat_list = []; // Clear stat list
     base_total = 0; // Reset base total
     Helditems.innerHTML='<p style="font-size: 26px; text-decoration: underline;"><b><i>Held Items</i></b></p>'
     num_hp.textContent = "";

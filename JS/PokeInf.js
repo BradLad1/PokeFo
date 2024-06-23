@@ -116,7 +116,7 @@ async function Show_that_pokemon(){
         showpokemon = false
         //This code is meant to not let the application work unless a name is entered
     }
-        
+    console.log(showpokemon)
     if (showpokemon==true){   
         nopokemon.innerText=""
         pokeball_red.classList.add("animate-topart")
@@ -383,6 +383,7 @@ WeightOfPokemon.appendChild(p)
 
 spanHolderForbtn.innerHTML = '<button style="z-index: 1;" onclick="resetPokemonInfo()"  class="pokeget-GoBack" id="GoBackToMenu">Go Back</button>';//Create the go back button'; // create the go back button
 spanHolderForSearch.innerHTML=""
+RandomBtnContainer.innerHTML=""
 //progress section 
 //Generation of pokemon
 //This will give the genartion of a pokemon depending on the id
@@ -472,8 +473,7 @@ if(data.id >0 && data.id <=151 ){
 
 //WILL RESET ALL THE INFOMATION BACK TO THE START
 function resetPokemonInfo() {
-    
-    showpokemon = false;
+    console.log(showpokemon)
     spanHolderForSearch.innerHTML='<input type="text" class="poke-btn" id="poke-btn" style="text-align: center;"  placeholder=" Enter pokemon/id">'
     pokeball_red_Storage.innerHTML='<img src="./imgs/poketop.png" class="img-fluid top-part" width="600px" id="poketop-red" alt="top">'
     pokeball_white_Storage.innerHTML='<img src="./imgs/pokebottom.png" class="img-fluid bottom-part"  width="600px" alt="bottom">'
@@ -482,6 +482,7 @@ function resetPokemonInfo() {
     poketype.innerHTML = '<p style="font-size: 28px;text-decoration: underline;"> <b><i>Types</i><b> </p>'; // Clear the pokemon types
     baseaddtotal.innerText = ""; // Reset base total text
     base_total = 0; // Reset base total
+    stat_list = []; // Clear stat list
     Helditems.innerHTML='<p style="font-size: 26px; text-decoration: underline;"><b><i>Held Items</i></b></p>'
     num_hp.textContent = "";
     num_atk.textContent = "";
@@ -497,11 +498,13 @@ function resetPokemonInfo() {
     speed.style.width = "0%";
     WeightOfPokemon.innerHTML = '<p style="font-size: 28px; text-decoration: underline;"><b>  <i>Weight</i></b></p>'; // Clear weight
     origin_game.textContent = ""; // Clear origin game
-    spanHolderForbtn.innerHTML = '<button style="z-index: 1;" class="change-size" id="pokeget-btn">Search</button>'//clear button
+    spanHolderForbtn.innerHTML = ""//clear button
     RandomBtnContainer.innerHTML='<button style="z-index: 1;" id="pokeget-random" class="pokeget-random">Random</button>'//Will put back the Random btn
     dexbody.classList.remove("dex-body");
     dexbody.classList.remove("anim-square");
     dexbody.classList.add("hide-away");
+    spanHolderForbtn.appendChild(getpokemonbtn)//creates a clone button
+
     // Restore the Get Pokemon button
 
 }

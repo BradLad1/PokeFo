@@ -304,6 +304,9 @@ body{
 }
 
 
+@media screen and (max-width: 400px){
+}
+
 
 /*Add a media query for a galaxy fold it would be at 280px*/
 

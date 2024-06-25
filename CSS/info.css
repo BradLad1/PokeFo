@@ -64,7 +64,7 @@ body{
     outline: none;
     border: none;
     border-radius: 50%;
-    bottom: 20px;
+    bottom: -350px;
     left: 60px;
     background-color: white;
     font-size: 18px;
@@ -170,7 +170,7 @@ body{
 
 /*=============================================ANIMATION========================================================*/
 
-/*========================================MEDIA QUERY======================================*/
+/*==================================================================MEDIA QUERY======================================================================================================*/
 
 
 
@@ -233,6 +233,7 @@ body{
 @media screen and (max-width: 400px){
     body{
         background-color: rgb(28, 28, 29);
+        overflow-x: scroll;
     }
 
     .top-part{
@@ -269,7 +270,7 @@ body{
         outline: none;
         border: none;
         border-radius: 50%;
-        bottom: -475px;
+        bottom: -471px;
         left: 35px;
         background-color: white;
         font-size: 13px;
@@ -300,11 +301,37 @@ body{
         color: white;
         font-size: 11px;
     }
+/*===============MOBILE PHONE VERSION OF INFO CARD================*/
+img{
+    width: 90px;
+    height:90px
+}
+    .dex-body{
+        background-color: darkgray;
+        height: 360px;
+        width: 360px;
+        position: absolute;
+        top: 70px;
+        left: 0px;
+        border: 5px solid rgb(255, 255, 255);
+        border-radius: 5%;
+    }
+    .pokeget-GoBack{
+        position: relative;
+        outline: none;
+        border: none;
+        border-radius: 50%;
+        bottom: -550px;
+        left: 60px;
+        background-color: white;
+        font-size: 18px;
+        padding: 20px;
+    }
     
 }
 
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 240px){
 }
 
 
@@ -313,7 +340,7 @@ body{
 
 
 
-/*========================================MEDIA QUERY======================================*/
+/*==================================================================MEDIA QUERY======================================================================================================*/
 
 /*===================PROBLEMS*====================================
 
@@ -321,5 +348,6 @@ body{
 -CREATES A DUPLICATED WHEN SPAMMED
 -work on Random button
 -ADD TYPE SELECTION FOR RANDOM AND MAYBE DUAL TYPING 
+-Stop 
 */
 

@@ -384,6 +384,8 @@ WeightOfPokemon.appendChild(p)
 spanHolderForbtn.innerHTML = '<button style="z-index: 1;" onclick="resetPokemonInfo()"  class="pokeget-GoBack" id="GoBackToMenu">Go Back</button>';//Create the go back button'; // create the go back button
 spanHolderForSearch.innerHTML=""
 RandomBtnContainer.innerHTML=""
+pokeball_red_Storage.innerHTML=""
+pokeball_white_Storage.innerHTML=""
 //progress section 
 //Generation of pokemon
 //This will give the genartion of a pokemon depending on the id

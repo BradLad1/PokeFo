@@ -182,13 +182,13 @@ body{
         position: absolute;
         top:125px;
         width: 430px;
-        left: 20px;
+        left: 70px;
     }
     
     .bottom-part{
         position: absolute;
         top: 310px;
-        left: 20px;
+        left: 70px;
         /*bottom part that will come apart*/
         width: 430px;
     }
@@ -198,8 +198,8 @@ body{
         outline: none;
         border: none;
         border-radius: 50%;
-        bottom: 70px;
-        left: 60px;
+        bottom: -570px;
+        left: 65px;
         background-color: white;
         font-size: 18px;
         padding: 20px;
@@ -209,7 +209,7 @@ body{
         outline: none;
         border: none;
         border-radius: 50%;
-        bottom: -10px;
+        bottom: -490px;
         left: -40px;
         background-color: white;
         font-size: 18px;
@@ -223,7 +223,7 @@ body{
         height: 107px; /* Set the width and height to be equal */
         position: absolute;
         top: 256px;
-        left: 175px;
+        left: 225px;
         z-index: 1;
         font-size: 12px;
     }
@@ -302,32 +302,7 @@ body{
         font-size: 11px;
     }
 /*===============MOBILE PHONE VERSION OF INFO CARD================*/
-img{
-    width: 90px;
-    height:90px
-}
-    .dex-body{
-        background-color: darkgray;
-        height: 360px;
-        width: 360px;
-        position: absolute;
-        top: 70px;
-        left: 0px;
-        border: 5px solid rgb(255, 255, 255);
-        border-radius: 5%;
-    }
-    .pokeget-GoBack{
-        position: relative;
-        outline: none;
-        border: none;
-        border-radius: 50%;
-        bottom: -550px;
-        left: 60px;
-        background-color: white;
-        font-size: 18px;
-        padding: 20px;
-    }
-    
+
 }
 
 

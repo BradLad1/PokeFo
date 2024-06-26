@@ -209,7 +209,7 @@ body{
         outline: none;
         border: none;
         border-radius: 50%;
-        bottom: -490px;
+        bottom: -49e0px;
         left: -40px;
         background-color: white;
         font-size: 18px;
@@ -233,7 +233,7 @@ body{
 @media screen and (max-width: 400px){
     body{
         background-color: rgb(28, 28, 29);
-        overflow-x: scroll;
+        overflow-x: hidden;
     }
 
     .top-part{

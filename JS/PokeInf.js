@@ -1,12 +1,13 @@
 //===============VARIABLES =================
 getpokemonbtn=document.getElementById("pokeget-btn")
 showpokemon = false//Decide on if to show the pokemon
+Randomshowpokemon=false//Used to get the random pokemon
 dexbody=document.getElementById("dex-body")//Show the info dex box with the pokemon info
 poke_ball_top=document.getElementById("poketop-red")//Top part of the pokeball
 poke_ball_bottom=document.getElementById("pokebottom-white")//bottom part of the pokeball
 setEverythingBack=document.getElementById("monContainer")//Is used to set everything back to normal
 //pokeball variables
-poke_search_btn=document.getElementById("poke-btn")//the button for searching
+const poke_search_btn=document.getElementById("poke-btn")//the button for searching
 pokeball_red =document.querySelector(".top-part")//top part of pokeball
 pokeball_white=document.querySelector(".bottom-part")//bottom part of pokeball
 hideaway=document.querySelector("hide-away")//hides the og data
@@ -75,8 +76,8 @@ getpokemonbtn.addEventListener("click", Show_that_pokemon)//Used to get a random
 
 RandomBtn.addEventListener("click",()=>{
     lastclicked="Random"
-    poke_search_btn.placeholder = '';
-    poke_search_btn.style.backgroundColor ="red"
+    //poke_search_btn.style.backgroundColor ="red"
+    Randomshowpokemon = true
     console.log(lastclicked)
     Show_that_pokemon()
 })
@@ -88,18 +89,21 @@ RandomBtn.addEventListener("click",()=>{
 
 async function Show_that_pokemon(){
   
-    if (lastclicked == 'Random') {
-        chosenpokemon = Math.ceil(Math.random() * 1026)
-        poke_search_btn.textContent=chosenpokemon
-        console.log('Choosing Random');
-        lastclicked=""
-    }
+  
         var pokebutton = document.getElementById("poke-btn").value//Takes in a pokemon name or id
         const pokeChoice = pokebutton
         var chosenpokemon = pokeChoice.toLowerCase()
-        lastclicked=""
+    
 
+        if (lastclicked == "Random") {
+            chosenpokemon = Math.ceil(Math.random() * 1026)
+            console.log(chosenpokemon)
+            poke_search_btn.textContent="Choosing Random"
+            console.log('Choosing Random');
+            lastclicked=""
+            console.log(showpokemon)
 
+        }
     try{
 
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${chosenpokemon}`);
@@ -107,17 +111,17 @@ async function Show_that_pokemon(){
         if(!response.ok){
             throw new Error("Could not fetch resource");
      }
-
     
-    showpokemon = true
+     showpokemon = true
 
     if(pokebutton==""){
         nopokemon.innerText="ENTER A NAME"
         showpokemon = false
         //This code is meant to not let the application work unless a name is entered
     }
+
     console.log(showpokemon)
-    if (showpokemon==true){   
+    if (showpokemon==true || Randomshowpokemon==true){   
         nopokemon.innerText=""
         pokeball_red.classList.add("animate-topart")
         pokeball_white.classList.add("animate-bottompart")
@@ -127,6 +131,8 @@ async function Show_that_pokemon(){
         dexbody.classList.add("anim-square")
         dexbody.classList.remove("hide-away")
         getpokemonbtn.remove()
+
+        
 
     }
 
@@ -364,7 +370,7 @@ data.moves.forEach(Move=>{
 //MOVES
 
 
-RandomBtn.remove()//Remove the random btn when we get an a infocard
+//RandomBtn.style.display="none"//Remove the random btn when we get an a infocard
 
 //Remove randdom class
 
@@ -383,7 +389,7 @@ WeightOfPokemon.appendChild(p)
 
 spanHolderForbtn.innerHTML = '<button style="z-index: 1;" onclick="resetPokemonInfo()"  class="pokeget-GoBack" id="GoBackToMenu">Go Back</button>';//Create the go back button'; // create the go back button
 spanHolderForSearch.innerHTML=""
-RandomBtnContainer.innerHTML=""
+RandomBtn.style.display="none"
 pokeball_red_Storage.innerHTML=""
 pokeball_white_Storage.innerHTML=""
 //progress section 
@@ -476,6 +482,8 @@ if(data.id >0 && data.id <=151 ){
 //WILL RESET ALL THE INFOMATION BACK TO THE START
 function resetPokemonInfo() {
     console.log(showpokemon)
+    console.log(Randomshowpokemon)
+    RandomBtn.style.display="block"
     spanHolderForSearch.innerHTML='<input type="text" class="poke-btn" id="poke-btn" style="text-align: center;"  placeholder=" Enter pokemon/id">'
     pokeball_red_Storage.innerHTML='<img src="./imgs/poketop.png" class="img-fluid top-part" width="600px" id="poketop-red" alt="top">'
     pokeball_white_Storage.innerHTML='<img src="./imgs/pokebottom.png" class="img-fluid bottom-part"  width="600px" alt="bottom">'
@@ -501,7 +509,8 @@ function resetPokemonInfo() {
     WeightOfPokemon.innerHTML = '<p style="font-size: 28px; text-decoration: underline;"><b>  <i>Weight</i></b></p>'; // Clear weight
     origin_game.textContent = ""; // Clear origin game
     spanHolderForbtn.innerHTML = ""//clear button
-    RandomBtnContainer.innerHTML='<button style="z-index: 1;" id="pokeget-random" class="pokeget-random">Random</button>'//Will put back the Random btn
+    RandomBtn.style.display="inline"
+
     dexbody.classList.remove("dex-body");
     dexbody.classList.remove("anim-square");
     dexbody.classList.add("hide-away");

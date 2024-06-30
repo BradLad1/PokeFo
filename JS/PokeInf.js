@@ -175,7 +175,7 @@ data.abilities.forEach( abilityname =>{
     li.textContent = abilityname.ability.name
     li.style.fontWeight = "bold";
     li.style.color = "white";
-    li.style.fontSize ="23px"
+    li.style.fontSize ="20px"
     abilitylist.appendChild(li);
     console.log(abilityname)
 })
@@ -348,7 +348,7 @@ data.held_items.forEach(Helditem=>{
     li.innerText=Helditem.item.name
     li.style.color="white"
     li.style.fontWeight="bold"
-    li.style.fontSize = "23px"
+    li.style.fontSize = "20px"
     if(li.innerText ==""){
 
         li.innerText="None"
@@ -381,7 +381,7 @@ const p =document.createElement("p")
 const pokemonWeight = data.weight /10
 
 p.textContent=pokemonWeight +"Kg"
-p.style.fontSize ="25px"
+p.style.fontSize ="20px"
 p.style.fontWeight = "bold";
 p.style.color = "white";
 WeightOfPokemon.appendChild(p)
@@ -397,55 +397,55 @@ pokeball_white_Storage.innerHTML=""
 //This will give the genartion of a pokemon depending on the id
 if(data.id >0 && data.id <=151 ){
     origin_game.textContent ="Generation I"
-    origin_game.style.fontSize = "27px"
+    origin_game.style.fontSize = "20px"
     origin_game.style.color="white"
     origin_game.style.fontWeight = "bold";
     console.log("worked")
  } else if(data.id >=152 && data.id <=251){
     origin_game.textContent ="Generation II"
-    origin_game.style.fontSize = "27px"
+    origin_game.style.fontSize = "20px"
     origin_game.style.color="white"
     origin_game.style.fontWeight = "bold";
     console.log("worked")
 } else if(data.id >=252 && data.id <=386){
     origin_game.textContent ="Generation III"
-    origin_game.style.fontSize = "27px"
+    origin_game.style.fontSize = "20px"
     origin_game.style.color="white"
     origin_game.style.fontWeight = "bold";
     console.log("worked")
 }else if(data.id >=387 && data.id <=493){
     origin_game.textContent ="Generation IV"
-    origin_game.style.fontSize = "27px"
+    origin_game.style.fontSize = "20px"
     origin_game.style.color="white"
     origin_game.style.fontWeight = "bold";
     console.log("worked")
 }else if(data.id >=494 && data.id <=649){
     origin_game.textContent ="Generation V"
-    origin_game.style.fontSize = "27px"
+    origin_game.style.fontSize = "20px"
     origin_game.style.color="white"
     origin_game.style.fontWeight = "bold";
     console.log("worked")
 }else if(data.id >=650 && data.id <=721){
     origin_game.textContent ="Generation VI"
-    origin_game.style.fontSize = "27px"
+    origin_game.style.fontSize = "20px"
     origin_game.style.color="white"
     origin_game.style.fontWeight = "bold";
     console.log("worked")
 }else if(data.id >=722 && data.id <=807){
     origin_game.textContent ="Generation VII"
-    origin_game.style.fontSize = "27px"
+    origin_game.style.fontSize = "20px"
     origin_game.style.color="white"
     origin_game.style.fontWeight = "bold";
     console.log("worked")
 }else if(data.id >=810 && data.id <=905){
     origin_game.textContent ="Generation VIII"
-    origin_game.style.fontSize = "27px"
+    origin_game.style.fontSize = "20px"
     origin_game.style.color="white"
     origin_game.style.fontWeight = "bold";
     console.log("worked")
 }else if(data.id >=906 && data.id <=1026){
     origin_game.textContent ="Generation XI"
-    origin_game.style.fontSize = "27px"
+    origin_game.style.fontSize = "20px"
     origin_game.style.color="white"
     origin_game.style.fontWeight = "bold";
     console.log("worked")

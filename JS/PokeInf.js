@@ -82,6 +82,13 @@ RandomBtn.addEventListener("click",()=>{
     Show_that_pokemon()
 })
 
+poke_search_btn.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      Show_that_pokemon()
+    }
+})
+
 //Selection variables
 
 //===============VARIABLES =================

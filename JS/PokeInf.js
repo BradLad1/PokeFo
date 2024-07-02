@@ -1,7 +1,8 @@
 //===============VARIABLES =================
-getpokemonbtn=document.getElementById("pokeget-btn")
+const getpokemonbtn=document.getElementById("pokeget-btn")
 showpokemon = false//Decide on if to show the pokemon
 Randomshowpokemon=false//Used to get the random pokemon
+Entershowpokemon=false//Used with the enter button
 dexbody=document.getElementById("dex-body")//Show the info dex box with the pokemon info
 poke_ball_top=document.getElementById("poketop-red")//Top part of the pokeball
 poke_ball_bottom=document.getElementById("pokebottom-white")//bottom part of the pokeball
@@ -85,20 +86,21 @@ RandomBtn.addEventListener("click",()=>{
 poke_search_btn.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
       event.preventDefault();
-      Show_that_pokemon()
+      getpokemonbtn.click();
+      showpokemon = true
     }
 })
 
 //Selection variables
-
+const pokebutton = document.getElementById("poke-btn")//used to get the input field
 //===============VARIABLES =================
 
 
 async function Show_that_pokemon(){
   
   
-        var pokebutton = document.getElementById("poke-btn").value//Takes in a pokemon name or id
-        const pokeChoice = pokebutton
+        const pokebuttonValue = document.getElementById("poke-btn").value//Takes in a pokemon name or id as a value
+        const pokeChoice = pokebuttonValue
         var chosenpokemon = pokeChoice.toLowerCase()
     
 
@@ -128,7 +130,7 @@ async function Show_that_pokemon(){
     }
 
     console.log(showpokemon)
-    if (showpokemon==true || Randomshowpokemon==true){   
+    if (showpokemon==true || Randomshowpokemon==true ){   
         nopokemon.innerText=""
         pokeball_red.classList.add("animate-topart")
         pokeball_white.classList.add("animate-bottompart")
@@ -137,10 +139,6 @@ async function Show_that_pokemon(){
         dexbody.classList.add("dex-body") 
         dexbody.classList.add("anim-square")
         dexbody.classList.remove("hide-away")
-        getpokemonbtn.remove()
-
-        
-
     }
 
         const data =  await response.json()
@@ -252,8 +250,6 @@ data.types.forEach(PokemonType =>{
                 p.style.backgroundColor = "LightPink";
                 break;
         //This a switch statment that will change the colour depending on the type
-        
-
     }
     
     p.textContent=PokemonType.type.name 
@@ -395,7 +391,7 @@ WeightOfPokemon.appendChild(p)
 //Weight of pokemon
 
 spanHolderForbtn.innerHTML = '<button style="z-index: 1;" onclick="resetPokemonInfo()"  class="pokeget-GoBack" id="GoBackToMenu">Go Back</button>';//Create the go back button'; // create the go back button
-spanHolderForSearch.innerHTML=""
+pokebutton.style.display="none"
 RandomBtn.style.display="none"
 pokeball_red_Storage.innerHTML=""
 pokeball_white_Storage.innerHTML=""
@@ -461,13 +457,13 @@ if(data.id >0 && data.id <=151 ){
  //MELTAN CODE
  else if(data.id ==808 ){
     origin_game.textContent =" Pokémon: Let's Go Pikachu/Eevee"
-    origin_game.style.fontSize = "27px"
+    origin_game.style.fontSize = "20px"
     origin_game.style.color="white"
     origin_game.style.fontWeight = "bold";
     console.log("worked")
 }else if(data.id ==809 ){
     origin_game.textContent =" Pokémon: Let's Go Pikachu/Eevee"
-    origin_game.style.fontSize = "27px"
+    origin_game.style.fontSize = "20px"
     origin_game.style.color="white"
     origin_game.style.fontWeight = "bold";
     console.log("worked")
@@ -490,8 +486,9 @@ if(data.id >0 && data.id <=151 ){
 function resetPokemonInfo() {
     console.log(showpokemon)
     console.log(Randomshowpokemon)
+    console.log(Entershowpokemon)
     RandomBtn.style.display="block"
-    spanHolderForSearch.innerHTML='<input type="text" class="poke-btn" id="poke-btn" style="text-align: center;"  placeholder=" Enter pokemon/id">'
+    pokebutton.style.display="block"
     pokeball_red_Storage.innerHTML='<img src="./imgs/poketop.png" class="img-fluid top-part" width="600px" id="poketop-red" alt="top">'
     pokeball_white_Storage.innerHTML='<img src="./imgs/pokebottom.png" class="img-fluid bottom-part"  width="600px" alt="bottom">'
     pokeicon.innerHTML = ""; // Clear the pokemon icon
@@ -522,8 +519,8 @@ function resetPokemonInfo() {
     dexbody.classList.remove("anim-square");
     dexbody.classList.add("hide-away");
     spanHolderForbtn.appendChild(getpokemonbtn)//creates a clone button
-
-    // Restore the Get Pokemon button
+   
+        // Restore the Get Pokemon button
 
 }
 //WILL RESET ALL THE INFOMATION BACK TO THE START

@@ -7,7 +7,7 @@ body{
 
 .top-part{
     position: absolute;
-    top:87.8px;
+    top:145.8px;
     left: 460px;
     /*top part that will come apart*/
 
@@ -15,7 +15,7 @@ body{
 
 .bottom-part{
     position: absolute;
-    top: 347px;
+    top: 433px;
     left: 460px;
     /*bottom part that will come apart*/
 }
@@ -25,11 +25,11 @@ body{
     border: 6.8px solid rgb(0, 0, 0);
     border-radius: 70%; /* Ensures the element is a perfect circle */
      /* Adjust the padding as needed */
-    width: 173px; /* Set the width and height to be equal */
-    height: 149px; /* Set the width and height to be equal */
+    width: 170px; /* Set the width and height to be equal */
+    height: 163px; /* Set the width and height to be equal */
     position: absolute;
-    top: 274px;
-    left: 673px;
+    top: 350px;
+    left: 675px;
     z-index: 1;
 
 }

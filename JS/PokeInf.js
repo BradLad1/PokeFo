@@ -23,13 +23,14 @@ const spanHolderForSearch =document.getElementById("search-section")//Is the spa
 const pokeball_red_Storage=document.getElementById("TopSection")//Will store the red half of the ball
 const pokeball_white_Storage = document.getElementById("BottomSection")//Will store the white half of the ball
 //get the abilites
-abilitylist=document.getElementById("Abilites-list")
+abilitylist=document.getElementById("Abilites-list")//Will be to the abilites list 
 //pokeball variables
 
 //get type
 const btnCustom = document.querySelector(".btn-custom")
 //get type
 
+const EnterText = document.getElementById("EnterText")//The text that will say Enter pokemon 
 
 //Random Button
 const RandomBtn = document.getElementById("pokeget-random")//For the random button
@@ -472,6 +473,7 @@ if(data.id >0 && data.id <=151 ){
 
  } catch(error){
         console.error(error)
+        EnterText.textContent="Enter the name/id of a valid pokemon"
     }
 } 
 
@@ -487,6 +489,7 @@ function resetPokemonInfo() {
     console.log(showpokemon)
     console.log(Randomshowpokemon)
     console.log(Entershowpokemon)
+    EnterText.textContent="Enter a pokemon"
     RandomBtn.style.display="block"
     pokebutton.style.display="block"
     pokeball_red_Storage.innerHTML='<img src="./imgs/poketop.png" class="img-fluid top-part" width="600px" id="poketop-red" alt="top">'

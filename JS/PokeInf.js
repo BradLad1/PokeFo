@@ -85,7 +85,7 @@ RandomBtn.addEventListener("click",()=>{
 })
 
 poke_search_btn.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" ) {
       event.preventDefault();
       getpokemonbtn.click();
       showpokemon = true
@@ -104,7 +104,7 @@ async function Show_that_pokemon(){
         const pokeChoice = pokebuttonValue
         var chosenpokemon = pokeChoice.toLowerCase()
     
-
+        showpokemon=true
         if (lastclicked == "Random") {
             chosenpokemon = Math.ceil(Math.random() * 1026)
             console.log(chosenpokemon)
@@ -122,11 +122,12 @@ async function Show_that_pokemon(){
             throw new Error("Could not fetch resource");
      }
     
-     showpokemon = true
+    
 
     if(pokebutton==""){
         nopokemon.innerText="ENTER A NAME"
         showpokemon = false
+        EnterText.textContent="Enter the name/id of a valid pokemon"
         //This code is meant to not let the application work unless a name is entered
     }
 
@@ -140,6 +141,7 @@ async function Show_that_pokemon(){
         dexbody.classList.add("dex-body") 
         dexbody.classList.add("anim-square")
         dexbody.classList.remove("hide-away")
+        EnterText.innerText=""
     }
 
         const data =  await response.json()
@@ -454,7 +456,6 @@ if(data.id >0 && data.id <=151 ){
     origin_game.style.fontWeight = "bold";
     console.log("worked")
 }//This code will give the genaration of the pokemon depending on their id
-
  //MELTAN CODE
  else if(data.id ==808 ){
     origin_game.textContent =" Pokémon: Let's Go Pikachu/Eevee"
@@ -468,8 +469,10 @@ if(data.id >0 && data.id <=151 ){
     origin_game.style.color="white"
     origin_game.style.fontWeight = "bold";
     console.log("worked")
+    backgroundColor
 }
 //MELTAN CODE
+
 
  } catch(error){
         console.error(error)

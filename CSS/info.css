@@ -38,17 +38,20 @@ body{
     /*Will features to the body of the pokeball*/
     border: 3px solid black;
 }
+/*This is for the SEARCH button*/
 
 #pokeget-btn{
     position: relative;
     outline: none;
     border: none;
-    border-radius: 50%;
-    bottom: -520px;
-    left: 210px;
+    border-radius: 70%;
+    height: 105px;
+    bottom: -330px;
+    left: 223px;
     background-color: white;
     font-size: 18px;
-    padding: 20px;
+    padding-right: 23px;
+    padding-left: 23px;
 }
 
 #pokeget-btn:hover{
@@ -57,6 +60,7 @@ body{
     color: white;
     font-size: 18px;
 }
+/*This is for the SEARCH button*/
 
 /*This is for the go back button*/
 .pokeget-GoBack{
@@ -80,16 +84,19 @@ body{
 /*This is for the go back button*/
 
 
+/*This is for the random button*/
+
 .pokeget-random{
     position: relative;
     outline: none;
     border: none;
-    border-radius: 50%;
-    bottom: -410px;
+    border-radius: 70%;
+    height: 105px;
+    bottom: -460px;
     left: 110px;
     background-color: white;
     font-size: 18px;
-    padding: 20px;
+    padding: 16px;
 }
 
 .pokeget-random:hover{
@@ -98,6 +105,7 @@ body{
     color: white;
     font-size: 18px;
 }
+/*This is for the random button*/
 
 
 
@@ -108,7 +116,7 @@ body{
     height: 580px;
     width: 1000px;
     position: absolute;
-    top: 70px;
+    top: 100px;
     left: 290px;
     border: 5px solid rgb(255, 255, 255);
     border-radius: 5%;
@@ -176,7 +184,7 @@ body{
 
 @media screen and (max-width: 590px){
     body{
-        background-color: rgb(28, 28, 29);
+        background-color: rgb(255, 255, 107);
     }
     .top-part{
         position: absolute;
@@ -232,7 +240,7 @@ body{
 
 @media screen and (max-width: 400px){
     body{
-        background-color: rgb(28, 28, 29);
+        background-color: rgb(255, 255, 107);
         overflow-x: hidden;
     }
 

@@ -32,6 +32,18 @@
     font-weight: 500;
     font-style: italic;
     }
+
+    .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    }
+
+    .poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
 /*=========FONTS==========*/
 
 
@@ -39,7 +51,7 @@
 </head>
 <body>
 
-    <h1 id="EnterText" class="poppins-medium-italic">Enter A Pokemon</h1>
+    <h1 id="EnterText" class="poppins-semibold-italic  BigText">Enter A Pokemon</h1>
 
     <div id="monContainer" class="container">
         <!--This whole section is the pokeball body and search-->
@@ -55,32 +67,32 @@
 
             <span id="no-pokemon"></span>
             <!--This will show the body-->
-            <h1 id="pokemon-name" style="position: relative; left: 195px;top: 10px;font-size: 43px;"></h1>
+            <h1 id="pokemon-name" style="text-align: center ; position: relative; left: -230px;top: 3px; font-size: 45px;"></h1>
 
             <div id="pokemon-icon" class="iconsection">
             </div>
 
             <div class="container-fluid specialist-info"><!--Going to store the abilites,first apperance, types and held items-->
                 <ul id="Abilites-list" class="abilites-section"><!--Display abilities-->
-                    <b><i style="font-size: 28px; text-decoration: underline;" >Abilities</i></b>
+                    <span class="poppins-medium"><b style="font-size: 24px; text-decoration: underline;">Abilities</b></span>
                 </ul>        
                 
                 <div class="genartioninfo"><!--Display generation-->
-                    <span style="font-size: 28px; text-decoration: underline;"><b><i>First Appearance</i></b></span>
+                    <span style="font-size: 24px; text-decoration: underline;" class="poppins-medium"><b>First Appearance</b></span>
                     <p id="origin-game"></p>
                 </div>
                 
 
                 <div id="poke-type" class="container-md poke-type"><!--Display types-->
-                    <p style="font-size: 28px;text-decoration: underline;"><b><i>Types</i></b></p>
+                    <p style="font-size: 24px;text-decoration: underline;" class="poppins-medium"><b>Types</b></p>
                 </div>
 
                 <div id="Helditem" class="Held-item">
-                    <p style="font-size: 26px; text-decoration: underline;"><b><i>Held Items</i></b></p>
+                    <p style="font-size: 24px; text-decoration: underline;" class="poppins-medium"><b>Held Items</b></p>
                 </div>
 
                 <div class="weight" id="Weight">
-                    <p style="font-size: 28px; text-decoration: underline;"><b>  <i>Weight</i></b></p>
+                    <p style="font-size: 24px; text-decoration: underline;" class="poppins-medium"><b>Weight</b></p>
                     <!--This will store a poke weight-->
                 </div>
             </div>

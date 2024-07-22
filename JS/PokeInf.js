@@ -19,9 +19,10 @@ poketype =document.getElementById("poke-type")
 const origin_game=document.getElementById("origin-game")
 const spanHolderForbtn =document.getElementById("setToNormal")//Is the span that which innerHTML will be changed
 const spanHolderForSearch =document.getElementById("search-section")//Is the span that which innerHTML will be changed so we have the input still there
-
 const pokeball_red_Storage=document.getElementById("TopSection")//Will store the red half of the ball
 const pokeball_white_Storage = document.getElementById("BottomSection")//Will store the white half of the ball
+moveslist = document.getElementById("moves-list")//Gets the movelist 
+
 //get the abilites
 abilitylist=document.getElementById("Abilites-list")//Will be to the abilites list 
 //pokeball variables
@@ -365,11 +366,21 @@ data.held_items.forEach(Helditem=>{
 //HELD ITEMS
 
 //MOVES
-moveslist = document.getElementById("moves-list")
 data.moves.forEach(Move=>{
-    const li = document.createElement("li")
+    const li = document.createElement("li") 
+
+    if (Move.version_group_details.length > 0) {
+        num =Move.version_group_details.length
+        console.log(num)
+        movemethod = Move.version_group_details[num-1].move_learn_method.name;
+        if(movemethod=="machine"){
+            movemethod="TM"
+        }
+        learnmove = Move.version_group_details[num-1].level_learned_at
+    }
     moveslist.appendChild(li)
-    li.innerText=Move.move.name
+    li.innerText=Move.move.name + ":" + movemethod + "," + learnmove
+    
     li.style.textAlign="center"
     console.log(Move.move)
 })
@@ -520,7 +531,7 @@ function resetPokemonInfo() {
     origin_game.textContent = ""; // Clear origin game
     spanHolderForbtn.innerHTML = ""//clear button
     RandomBtn.style.display="inline"
-
+    moveslist.innerHTML='<p style=" text-align: center;font-size: 28px; margin: 0; padding: 0; text-decoration: underline;"><b>Moves</b></p>'
     dexbody.classList.remove("dex-body");
     dexbody.classList.remove("anim-square");
     dexbody.classList.add("hide-away");

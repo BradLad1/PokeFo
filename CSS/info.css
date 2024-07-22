@@ -1,5 +1,8 @@
 body{
+    background-image: round;
+
     background-color: rgb(255, 255, 107);
+
     padding: 0;
     margin: 0;
     overflow: hidden;
@@ -9,7 +12,7 @@ body{
 
 .top-part{
     position: absolute;
-    top:145.8px;
+    top:148.8px;
     left: 460px;
     /*top part that will come apart*/
 
@@ -263,6 +266,9 @@ body{
         background-color: rgb(255, 255, 107);
         overflow-x: hidden;
     }
+    h1.BigText{
+        font-size: 30px;
+    }
 
     .top-part{
         position: absolute;
@@ -285,9 +291,9 @@ body{
         border-radius: 70%; /* Ensures the element is a perfect circle */
          /* Adjust the padding as needed */
         width: 91px; /* Set the width and height to be equal */
-        height: 87px; /* Set the width and height to be equal */
+        height: 89px; /* Set the width and height to be equal */
         position: absolute;
-        top: 308px;
+        top: 302px;
         left: 144px;
         z-index: 1;
         font-size: 9px;
@@ -298,22 +304,22 @@ body{
         outline: none;
         border: none;
         border-radius: 50%;
-        bottom: -471px;
-        left: 35px;
+        top: 530px;
+        left: 15px;
         background-color: white;
         font-size: 13px;
-        padding: 12px;
+        padding: 10px;
     }
     .pokeget-random{
         position: relative;
         outline: none;
         border: none;
         border-radius: 50%;
-        bottom:-540px;
-        left: -35px;
+        top: 530px;
+        left: 150px;
         background-color: white;
         font-size: 13px;
-        padding: 12px;
+        padding: 10px;
     }
     
     #pokeget-btn:hover{

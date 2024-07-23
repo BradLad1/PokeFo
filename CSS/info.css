@@ -1,11 +1,8 @@
 body{
     background-image: round;
-
     background-color: rgb(255, 255, 107);
-
     padding: 0;
     margin: 0;
-    overflow: hidden;
 }
 
 
@@ -36,6 +33,7 @@ body{
     top: 350px;
     left: 675px;
     z-index: 1;
+    /*coooment*/
 
 }
 
@@ -69,11 +67,11 @@ body{
 
 /*This is for the go back button*/
 .pokeget-GoBack{
-    position: relative;
+    position: absolute;
     outline: none;
     border: none;
     border-radius: 50%;
-    bottom: -350px;
+    bottom: 350px;
     left: 60px;
     background-color: white;
     font-size: 18px;
@@ -256,15 +254,21 @@ body{
         z-index: 1;
         font-size: 10px;
     }
-
-    
+    .pokeget-GoBack{
+        bottom: 625px;
+        left: 210px;
+    }
+    .dex-body{
+        height: 590px;
+        width: 540px;
+        left: 0px;
+    }
 }
 
 
 @media screen and (max-width: 400px){
     body{
         background-color: rgb(255, 255, 107);
-        overflow-x: hidden;
     }
     h1.BigText{
         font-size: 30px;
@@ -334,6 +338,11 @@ body{
         border: 3.2px solid red;
         color: white;
         font-size: 11px;
+    }
+    
+    .statValue{
+        height: 20px;
+        width: 5px;
     }
 /*===============MOBILE PHONE VERSION OF INFO CARD================*/
 

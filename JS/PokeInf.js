@@ -66,6 +66,16 @@ base_total=0
 percentinum=0
 //stat variables
 
+//Window Height AND Width this is also for the right and left arrows
+/*The window height and width will be used to for when changing 
+the size and adding arrows to change to the moves,stats andotherInfo*/
+const windowWidth =window.innerWidth
+const windowHeight = window.innerHeight
+const LeftarrowStorageSpan =document.getElementById("left-arrow")
+const RightarrowStorageSpan  =document.getElementById("right-arrow")
+//Window Height AND Width this is also for the right and left arrows
+
+
 
 const Helditems=document.getElementById("Helditem")//For the held items
 functionpressed =0
@@ -393,6 +403,8 @@ data.moves.forEach(Move=>{
 
 
 
+
+
 //Weight of pokemon
 const p =document.createElement("p")
 const pokemonWeight = data.weight /10
@@ -489,6 +501,19 @@ if(data.id >0 && data.id <=151 ){
         console.error(error)
         EnterText.textContent="Enter the name/id of a valid pokemon"
     }
+
+
+
+//MOBILE OPTIMASTION CODE
+if(windowWidth <=590){
+    LeftarrowImg=document.createElement("img")
+    LeftarrowImg.src="imgs/LeftArrow.png"
+    LeftarrowStorageSpan.appendChild(LeftarrowImg)
+}
+
+//MOBILE OPTIMASTION CODE
+
+
 } 
 
 

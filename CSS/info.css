@@ -24,15 +24,16 @@ body{
 
 
 .poke-btn{
-    border: 6.8px solid rgb(0, 0, 0);
+  /*  border: 6.8px solid rgb(0, 0, 0);*/
     border-radius: 70%; /* Ensures the element is a perfect circle */
      /* Adjust the padding as needed */
     width: 170px; /* Set the width and height to be equal */
-    height: 163px; /* Set the width and height to be equal */
+    height: 160px; /* Set the width and height to be equal */
     position: absolute;
-    top: 350px;
+    top: 355px;
     left: 675px;
     z-index: 1;
+    border: none;
     /*coooment*/
 
 }
@@ -141,7 +142,13 @@ body{
     animation:  Info-Square-h 2s  ease-in-out normal forwards;
 }
 
-
+.pokeText{
+    text-align: center ; 
+    position: relative; 
+    left: -230px;
+    top: 3px; 
+    font-size: 45px;
+}
 
 @keyframes Poketop {
     0%{
@@ -191,8 +198,18 @@ body{
     }
     .BigText{
         position: absolute;
-        left: 90px;
-        font-size: 47px;
+        left: 130px;
+        font-size: 40px;
+    }
+    .stat-bar{
+        transform: scale(0.7);
+        margin-left: 20px;
+    }
+
+    .pokeText{
+        position: relative; 
+        left: -2px;
+        /*This text is for the main pokemon body section*/
     }
     .top-part{
         position: absolute;
@@ -223,7 +240,12 @@ body{
         width: 85px;
         height: 85px;
     }
-    
+    .specialist-info{
+      display: none;
+    }
+    .moves-list-class{
+        display: none;
+    }
     .pokeget-random{
         position: absolute;
         outline: none;
@@ -247,20 +269,20 @@ body{
         border-radius: 70%; /* Ensures the element is a perfect circle */
          /* Adjust the padding as needed */
         width: 120px; /* Set the width and height to be equal */
-        height: 120px; /* Set the width and height to be equal */
+        height: 140px; /* Set the width and height to be equal */
         position: absolute;
-        top: 270px;
+        top: 290px;
         left: 225px;
         z-index: 1;
         font-size: 10px;
     }
     .pokeget-GoBack{
-        bottom: 625px;
-        left: 210px;
+        bottom: 685px;
+        left: 220px;
     }
     .dex-body{
         height: 590px;
-        width: 540px;
+        width: 567px;
         left: 0px;
     }
 }
@@ -340,10 +362,7 @@ body{
         font-size: 11px;
     }
     
-    .statValue{
-        height: 20px;
-        width: 5px;
-    }
+    
 /*===============MOBILE PHONE VERSION OF INFO CARD================*/
 
 }

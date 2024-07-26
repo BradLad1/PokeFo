@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="shortcut icon" type="image/x-icon" href="./imgs/TabIcon.ico" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokéFo</title>
@@ -35,7 +36,14 @@
 
     .poppins-medium {
     font-family: "Poppins", sans-serif;
-    font-weight: 500;
+    font-weight: 700;
+    font-style: bold;
+    }
+
+    .poppins-mediumheader {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+
     }
 
     .poppins-semibold-italic {
@@ -64,10 +72,11 @@
         <span id="RandomBtnContainer"><button style="z-index: 1;" id="pokeget-random" class="pokeget-random poppins-medium-italic">Random</button></span><!--Here is what we use to search for a pokemon-->
 
         <div class="hide-away" id="dex-body" >
-
+            <span id="left-arrow"></span>
+            <span id="right-arrow"></span>
             <span id="no-pokemon"></span>
             <!--This will show the body-->
-            <h1 id="pokemon-name" style="text-align: center ; position: relative; left: -230px;top: 3px; font-size: 45px;"></h1>
+            <h1 id="pokemon-name"  class="poppins-mediumheader pokeText"></h1>
 
             <div id="pokemon-icon" class="iconsection">
             </div>
@@ -140,7 +149,8 @@
     </div>
     <script src="JS/PokeInf.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7061855799174378"
+    crossorigin="anonymous"></script>
     <!--Ads for the website-->
 
     <!--Ads for the website-->

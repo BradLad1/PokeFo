@@ -189,9 +189,9 @@ body{
     body{
         background-color: rgb(255, 255, 107);
     }
-    .BigText{
-        position: absolute;
-        left: 90px;
+    h1.BigText{
+        position: relative;
+        left:30px;
         font-size: 47px;
     }
     .top-part{
@@ -223,7 +223,12 @@ body{
         width: 85px;
         height: 85px;
     }
-    
+    .specialist-info{
+      display: none;
+    }
+    .moves-list-class{
+        display: none;
+    }
     .pokeget-random{
         position: absolute;
         outline: none;
@@ -255,8 +260,8 @@ body{
         font-size: 10px;
     }
     .pokeget-GoBack{
-        bottom: 625px;
-        left: 210px;
+        bottom: 685px;
+        left: 220px;
     }
     .dex-body{
         height: 590px;

@@ -509,6 +509,15 @@ if(windowWidth <=590){
     LeftarrowImg=document.createElement("img")
     LeftarrowImg.src="imgs/LeftArrow.png"
     LeftarrowStorageSpan.appendChild(LeftarrowImg)
+    
+
+    RightarrowImg=document.createElement("img")
+    RightarrowImg.src="imgs/RightArrow.png"
+    RightarrowStorageSpan.appendChild(RightarrowImg)
+
+    LeftarrowImg.classList.add("arrowbtns")
+    RightarrowImg.classList.add("arrowbtns")
+
 }
 
 //MOBILE OPTIMASTION CODE
@@ -528,6 +537,8 @@ function resetPokemonInfo() {
     console.log(showpokemon)
     console.log(Randomshowpokemon)
     console.log(Entershowpokemon)
+    LeftarrowStorageSpan.innerHTML=""
+    RightarrowStorageSpan.innerHTML=""
     EnterText.textContent="Enter a pokemon"
     RandomBtn.style.display="block"
     pokebutton.style.display="block"

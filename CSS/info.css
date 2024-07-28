@@ -220,7 +220,7 @@ body{
     
     .bottom-part{
         position: absolute;
-        top: 331px;
+        top: 327px;
         left: 70px;
         /*bottom part that will come apart*/
         width: 430px;
@@ -269,15 +269,15 @@ body{
         border-radius: 70%; /* Ensures the element is a perfect circle */
          /* Adjust the padding as needed */
         width: 120px; /* Set the width and height to be equal */
-        height: 140px; /* Set the width and height to be equal */
+        height: 113px; /* Set the width and height to be equal */
         position: absolute;
-        top: 290px;
+        top: 272px;
         left: 225px;
         z-index: 1;
         font-size: 10px;
     }
     .pokeget-GoBack{
-        bottom: 685px;
+        bottom: 645px;
         left: 220px;
     }
     .dex-body{

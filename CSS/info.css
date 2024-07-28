@@ -264,6 +264,19 @@ body{
         height: 85px;
 
     }
+    .pokeget-random:hover{
+        background-color: rgb(11, 11, 11);
+        border: 3.2px solid red;
+        color: white;
+        font-size: 14px;
+    }
+
+    #pokeget-btn:hover{
+        background-color: rgb(11, 11, 11);
+        border: 3.2px solid red;
+        color: white;
+        font-size: 14px;
+    }
 
     .poke-btn{
         border-radius: 70%; /* Ensures the element is a perfect circle */

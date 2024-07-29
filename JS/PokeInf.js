@@ -504,7 +504,7 @@ async function Show_that_pokemon() {
     }
     //MELTAN CODE
 
-    Arrownbtns()
+    Arrownbtns()//Arrow button function 
   } catch (error) {
     console.error(error)
     EnterText.textContent = "Enter the name/id of a valid pokemon"

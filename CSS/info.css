@@ -3,7 +3,7 @@ body{
     background-color: rgb(255, 255, 107);
     padding: 0;
     margin: 0;
-  /*  overflow:hidden*/
+    overflow:hidden
 }
 
 
@@ -16,6 +16,10 @@ body{
 
 }
 
+.csd{
+    width:5000px;
+    height:800px
+}
 .bottom-part{
     position: absolute;
     top: 433px;

@@ -139,4 +139,63 @@ left: 20px;}
 /*spefic info*/
 
 
+@media screen and (max-width: 590px){
 
+p{
+    font-size:13px
+}
+
+ .genartioninfo .first-apperance{
+    font-size:13px
+}
+
+#Abilites-list .first-apperance{
+    font-size:13px
+}
+
+  .moves-list-class{
+    width:350px;
+    height:230px;
+    left:-70px;
+    top:145px;
+    display:none
+
+  }
+  .specialist-info{
+        height:290px;
+        width: 330px;
+        position: absolute;
+        left: 130px;
+        bottom: 15px;
+        display:none
+}
+.weight {
+    font-size:5px
+
+}
+
+
+#Abilites-list ul  li{
+    /*Add in the stylinf for ability section*/
+    font-size:-2px
+}
+
+#Abilites-list{
+    top:25px;
+    left:200px
+}
+
+
+.Held-item {
+    font-size:13px;
+    left:223px;
+    top:155px
+}
+
+
+
+.poke-type{
+    top:183px;
+    left:12px
+}
+}

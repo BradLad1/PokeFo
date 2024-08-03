@@ -1,30 +1,34 @@
+// Whole-script strict mode syntax
+"use strict";
+
+
 //===============VARIABLES =================
 const getpokemonbtn = document.getElementById("pokeget-btn")
-showpokemon = false //Decide on if to show the pokemon
-Randomshowpokemon = false //Used to get the random pokemon
-Entershowpokemon = false //Used with the enter button
-dexbody = document.getElementById("dex-body") //Show the info dex box with the pokemon info
-poke_ball_top = document.getElementById("poketop-red") //Top part of the pokeball
-poke_ball_bottom = document.getElementById("pokebottom-white") //bottom part of the pokeball
-setEverythingBack = document.getElementById("monContainer") //Is used to set everything back to normal
+let  showpokemon = false //Decide on if to show the pokemon
+let Randomshowpokemon = false //Used to get the random pokemon
+let Entershowpokemon = false //Used with the enter button
+const dexbody = document.getElementById("dex-body") //Show the info dex box with the pokemon info
+const poke_ball_top = document.getElementById("poketop-red") //Top part of the pokeball
+const poke_ball_bottom = document.getElementById("pokebottom-white") //bottom part of the pokeball
+const setEverythingBack = document.getElementById("monContainer") //Is used to set everything back to normal
 //pokeball variables
 const poke_search_btn = document.getElementById("poke-btn") //the button for searching
-pokeball_red = document.querySelector(".top-part") //top part of pokeball
-pokeball_white = document.querySelector(".bottom-part") //bottom part of pokeball
-hideaway = document.querySelector("hide-away") //hides the og data
-pokeicon = document.getElementById("pokemon-icon") //shows the pokemon icon
-nopokemon = document.getElementById("no-pokemon") //will show if there is no pokemon
+const pokeball_red = document.querySelector(".top-part") //top part of pokeball
+const pokeball_white = document.querySelector(".bottom-part") //bottom part of pokeball
+const hideaway = document.querySelector("hide-away") //hides the og data
+const pokeicon = document.getElementById("pokemon-icon") //shows the pokemon icon
+const nopokemon = document.getElementById("no-pokemon") //will show if there is no pokemon
 const pokemonName = document.getElementById("pokemon-name") //The pokemon's name
-poketype = document.getElementById("poke-type")
+const poketype = document.getElementById("poke-type")
 const origin_game = document.getElementById("origin-game")
 const spanHolderForbtn = document.getElementById("setToNormal") //Is the span that which innerHTML will be changed
 const spanHolderForSearch = document.getElementById("search-section") //Is the span that which innerHTML will be changed so we have the input still there
 const pokeball_red_Storage = document.getElementById("TopSection") //Will store the red half of the ball
 const pokeball_white_Storage = document.getElementById("BottomSection") //Will store the white half of the ball
-moveslist = document.getElementById("moves-list") //Gets the movelist 
+const moveslist = document.getElementById("moves-list") //Gets the movelist 
 
 //get the abilites
-abilitylist = document.getElementById("Abilites-list") //Will be to the abilites list 
+const abilitylist = document.getElementById("Abilites-list") //Will be to the abilites list 
 //pokeball variables
 
 //get type
@@ -42,37 +46,37 @@ const RandomBtnContainer = document.getElementById("RandomBtnContainer") //Will 
 
 
 //ARROWBTNS 
-const LeftArrow = document.getElementById("left-arrow")
-const RightArrow = document.getElementById("right-arrow")
+let LeftArrow = document.getElementById("left-arrow")
+let RightArrow = document.getElementById("right-arrow")
 
 //ARROWBTNS 
 
 
 
 //stat variables
-hp = document.getElementById("hp")
-atk = document.getElementById("attack")
-def = document.getElementById("def")
-special_atk = document.getElementById("special-atk")
-special_def = document.getElementById("special-def")
-speed = document.getElementById("speed")
-baseaddtotal = document.getElementById("basetotal")
-statpercentage = document.querySelector("stat-percent")
+let hp = document.getElementById("hp")
+let atk = document.getElementById("attack")
+let def = document.getElementById("def")
+let special_atk = document.getElementById("special-atk")
+let special_def = document.getElementById("special-def")
+let speed = document.getElementById("speed")
+let baseaddtotal = document.getElementById("basetotal")
+let statpercentage = document.querySelector("stat-percent")
 
 
 ///Number of the stat
-num_hp = document.getElementById("num-hp")
-num_atk = document.getElementById("num-atk")
-num_def = document.getElementById("num-def")
-num_specialatk = document.getElementById("num-specialatk")
-num_specialdef = document.getElementById("num-specialdef")
-num_speed = document.getElementById("num-speed")
+const num_hp = document.getElementById("num-hp")
+const num_atk = document.getElementById("num-atk")
+const num_def = document.getElementById("num-def")
+const num_specialatk = document.getElementById("num-specialatk")
+const num_specialdef = document.getElementById("num-specialdef")
+const num_speed = document.getElementById("num-speed")
 const WeightOfPokemon = document.getElementById("Weight") //weight of the pokemon
 ///Number of the stat
 
-stat_list = []
-base_total = 0
-percentinum = 0
+let stat_list = []
+let base_total = 0
+let percentinum = 0
 //stat variables
 
 //Window Height AND Width this is also for the right and left arrows
@@ -80,14 +84,14 @@ percentinum = 0
 the size and adding arrows to change to the moves,stats andotherInfo*/
 const windowWidth = window.innerWidth
 const windowHeight = window.innerHeight
-const LeftarrowStorageSpan = document.getElementById("left-arrow")
-const RightarrowStorageSpan = document.getElementById("right-arrow")
+let LeftarrowStorageSpan = document.getElementById("left-arrow")
+let RightarrowStorageSpan = document.getElementById("right-arrow")
 //Window Height AND Width this is also for the right and left arrows
 
 
 
 const Helditems = document.getElementById("Helditem") //For the held items
-functionpressed = 0
+
 
 //Selection variables
 /*These variables will be used for the selection of a pokemon */
@@ -115,6 +119,35 @@ poke_search_btn.addEventListener("keypress", function(event) {
 //Selection variables
 const pokebutton = document.getElementById("poke-btn") //used to get the input field
 //===============VARIABLES =================
+
+
+
+function Arrownbtns(ArrowClass){
+    //This whole function is for the arrow btns and moving them arrow 
+  if (windowWidth <= 590) {
+    LeftArrow = document.createElement("img")
+    LeftArrow.src = "imgs/LeftArrow.png"
+    LeftarrowStorageSpan.appendChild(LeftArrow)
+
+
+    RightArrow = document.createElement("img")
+    RightArrow.src = "imgs/RightArrow.png"
+    RightarrowStorageSpan.appendChild(RightArrow)
+
+    RightArrow.classList.add(ArrowClass)
+    LeftArrow.classList.add(ArrowClass)
+  
+  }else{
+    
+  }
+
+  LeftArrow.addEventListener("click", function() {
+    console.log("Left click")
+
+
+  RightArrow.addEventListener("click", function() {
+    console.log("Right click")
+  })  })}
 
 
 async function Show_that_pokemon() {
@@ -167,7 +200,7 @@ async function Show_that_pokemon() {
     const data = await response.json()
     console.log(data)
     //get the image
-    Img = document.createElement("img")
+    let Img = document.createElement("img")
     pokeicon.appendChild(Img)
     const pokemonSprite = data.sprites.front_default;
     Img.style.scale = "2.3"
@@ -291,7 +324,7 @@ async function Show_that_pokemon() {
     will give the percentage that each stat makes on the base stat and it will show it on a progress bar*/
     console.log(data.stats)
     data.stats.forEach(stats => {
-      added_stat = stats.base_stat //getting the base stat
+      const added_stat = stats.base_stat //getting the base stat
       stat_list.push(added_stat)
 
       base_total = base_total + added_stat
@@ -333,8 +366,8 @@ async function Show_that_pokemon() {
     console.log(stat_list)
     console.log(base_total)
     for (let i = 0; i < stat_list.length; i++) {
-      percent_of_stat = stat_list[i] / base_total * 100;
-      roundnum = percent_of_stat.toFixed(2);
+    const percent_of_stat = stat_list[i] / base_total * 100;
+    const  roundnum = percent_of_stat.toFixed(2);
       console.log(roundnum);
 
       // Get the corresponding stat element based on the loop index
@@ -388,19 +421,21 @@ async function Show_that_pokemon() {
       const li = document.createElement("li")
 
       if (Move.version_group_details.length > 0) {
-        num = Move.version_group_details.length
-        console.log(num)
-        movemethod = Move.version_group_details[num - 1].move_learn_method.name;
+        const num = Move.version_group_details.length
+        let movemethod = Move.version_group_details[num - 1].move_learn_method.name;
+        const learnmove = Move.version_group_details[num - 1].level_learned_at
+
         if (movemethod == "machine") {
           movemethod = "TM"
         }
-        learnmove = Move.version_group_details[num - 1].level_learned_at
+        li.innerText = Move.move.name + ":" + movemethod + "," + learnmove
+        moveslist.appendChild(li)
+        li.style.textAlign = "center"
+        console.log(Move.move)
       }
-      moveslist.appendChild(li)
-      li.innerText = Move.move.name + ":" + movemethod + "," + learnmove
 
-      li.style.textAlign = "center"
-      console.log(Move.move)
+     
+     
     })
     //MOVES
 
@@ -504,7 +539,7 @@ async function Show_that_pokemon() {
     }
     //MELTAN CODE
 
-    Arrownbtns()//Arrow button function 
+    Arrownbtns("arrowbtns")//Arrow button function 
   } catch (error) {
     console.error(error)
     EnterText.textContent = "Enter the name/id of a valid pokemon"
@@ -513,34 +548,10 @@ async function Show_that_pokemon() {
 
 
   //MOBILE OPTIMASTION CODE
-  function Arrownbtns(){
-    //This whole function is for the arrow btns and moving them arrow 
-  if (windowWidth <= 590) {
-    LeftarrowImg = document.createElement("img")
-    LeftarrowImg.src = "imgs/LeftArrow.png"
-    LeftarrowStorageSpan.appendChild(LeftarrowImg)
-
-
-    RightarrowImg = document.createElement("img")
-    RightarrowImg.src = "imgs/RightArrow.png"
-    RightarrowStorageSpan.appendChild(RightarrowImg)
-
-    LeftarrowImg.classList.add("arrowbtns")
-    RightarrowImg.classList.add("arrowbtns")
-  }
-
-  LeftArrow.addEventListener("click", function() {
-    console.log("Left click")
-
-
-  RightArrow.addEventListener("click", function() {
-    console.log("Right click")
-  })  })}
-  //MOBILE OPTIMASTION CODE
-
+  
 
 }
-
+  //MOBILE OPTIMASTION CODE
 
 
 

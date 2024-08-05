@@ -122,7 +122,7 @@ const pokebutton = document.getElementById("poke-btn") //used to get the input f
 
 
 
-function Arrownbtns(ArrowClass){
+function Arrownbtns(ArrowClass,RightArrowClass,LeftArrowClass){
     //This whole function is for the arrow btns and moving them arrow 
   if (windowWidth <= 590) {
     LeftArrow = document.createElement("img")
@@ -131,12 +131,15 @@ function Arrownbtns(ArrowClass){
 
 
     RightArrow = document.createElement("img")
-    RightArrow.src = "imgs/RightArrow.png"
+    RightArrow.src = 'imgs/RightArrow.png'
     RightarrowStorageSpan.appendChild(RightArrow)
 
     RightArrow.classList.add(ArrowClass)
     LeftArrow.classList.add(ArrowClass)
-  
+    RightArrow.classList.add(RightArrowClass)
+    LeftArrow.classList.add(LeftArrowClass)
+
+    
   }else{
     
   }
@@ -539,7 +542,7 @@ async function Show_that_pokemon() {
     }
     //MELTAN CODE
 
-    Arrownbtns("arrowbtns")//Arrow button function 
+    Arrownbtns("arrowbtns","RightArrow","LeftArrow")//Arrow button function 
   } catch (error) {
     console.error(error)
     EnterText.textContent = "Enter the name/id of a valid pokemon"

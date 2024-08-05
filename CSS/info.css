@@ -3,6 +3,7 @@ body{
     background-color: rgb(255, 255, 107);
     padding: 0;
     margin: 0;
+    
 }
 
 
@@ -195,6 +196,7 @@ body{
 @media screen and (max-width: 590px){
     body{
         background-color: rgb(255, 255, 107);
+        overflow.x: scroll
     }
     .BigText{
         position: absolute;
@@ -207,8 +209,10 @@ body{
     }
 
     .pokeText{
-        position: relative; 
-        left: -2px;
+        position: absolute; 
+        left: 140px;
+        top:30px;
+        font-size:50px
         /*This text is for the main pokemon body section*/
     }
     .top-part{
@@ -290,13 +294,23 @@ body{
         font-size: 10px;
     }
     .pokeget-GoBack{
-        bottom: 645px;
+        bottom: 660px;
         left: 220px;
     }
     .dex-body{
         height: 590px;
         width: 567px;
         left: 0px;
+    }
+
+    .iconsection{
+        position:relative;
+        top:-175px;
+        scale:1.1
+    }
+    .BigText{
+        position:relative;
+        top:65px
     }
 }
 
@@ -375,6 +389,7 @@ body{
         font-size: 11px;
     }
     
+
     
 /*===============MOBILE PHONE VERSION OF INFO CARD================*/
 

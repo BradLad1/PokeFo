@@ -140,7 +140,23 @@ left: 20px;}
 
 
 .arrowbtns{
-    margin-left:940px;
-   scale: 0.3;
-   margin-top
+    position:relative;
+   scale: 0.35;
+   top:230px
+  
+}
+
+.RightArrow{
+    position:relative;
+    left:180px;
+    top:260px;    
+    cursor:pointer
+
+}
+
+.LeftArrow{
+    position:relative;
+    left:-50px;
+    top:260px;
+    cursor:pointer
 }

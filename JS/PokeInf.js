@@ -542,7 +542,7 @@ async function Show_that_pokemon() {
     }
     //MELTAN CODE
 
-    Arrownbtns("arrowbtns","RightArrow","LeftArrow")//Arrow button function 
+    Arrownbtns("arrowbtns","LeftArrow","RightArrow")//Arrow button function 
   } catch (error) {
     console.error(error)
     EnterText.textContent = "Enter the name/id of a valid pokemon"

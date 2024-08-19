@@ -138,6 +138,7 @@ left: 20px;}
 
 /*spefic info*/
 
+@media screen and (max-width: 590px){
 
 .arrowbtns{
     position:relative;
@@ -162,7 +163,53 @@ left: 20px;}
 
 .LeftArrow:active{
     /*Going to be used for the clicking colour*/
-    background-color:rgb(43,21,2);
-
-    opacity:5.2%
+    background-color:white;
+    opacity:10.2%;
+    
 }
+
+.RightArrow:active{
+    /*Going to be used for the clicking colour*/
+    background-color:white;
+    opacity:10.2%;
+    
+}
+}
+
+@media screen and (max-width: 400px){
+
+    .arrowbtns{
+        position:relative;
+       scale: 0.35;
+       top:30px
+      
+    }
+    
+    .RightArrow{
+        position:relative;
+        left:-50px;
+        top:260px;    
+        cursor:pointer
+    }
+    
+    .LeftArrow{
+        position:relative;
+        left:200px;
+        top:260px;
+        cursor:pointer
+    }
+    
+    .LeftArrow:active{
+        /*Going to be used for the clicking colour*/
+        background-color:white;
+        opacity:10.2%;
+        
+    }
+    
+    .RightArrow:active{
+        /*Going to be used for the clicking colour*/
+        background-color:white;
+        opacity:10.2%;
+        
+    }
+    }

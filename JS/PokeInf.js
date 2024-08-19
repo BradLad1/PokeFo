@@ -122,35 +122,50 @@ const pokebutton = document.getElementById("poke-btn") //used to get the input f
 
 
 
-function Arrownbtns(ArrowClass,RightArrowClass,LeftArrowClass){
-    //This whole function is for the arrow btns and moving them arrow 
-  if (windowWidth <= 590) {
-    LeftArrow = document.createElement("img")
-    LeftArrow.src = "imgs/LeftArrow.png"
-    LeftarrowStorageSpan.appendChild(LeftArrow)
+function Arrownbtns(ArrowClass, RightArrowClass, LeftArrowClass) {
+  // Function to handle arrow buttons based on window width
+  function handleArrowButtons() {
+      // Get the current window width
+      const windowWidth = window.innerWidth;
 
+      // Check if the window width is 590 pixels or less
+      if (windowWidth <= 590) {
+          // If the arrows don't already exist, create and append them
+          if (!LeftarrowStorageSpan.querySelector("img")) {
+              const LeftArrow = document.createElement("img");
+              LeftArrow.src = "imgs/LeftArrow.png";
+              LeftarrowStorageSpan.appendChild(LeftArrow);
 
-    RightArrow = document.createElement("img")
-    RightArrow.src = 'imgs/RightArrow.png'
-    RightarrowStorageSpan.appendChild(RightArrow)
+              const RightArrow = document.createElement("img");
+              RightArrow.src = 'imgs/RightArrow.png';
+              RightarrowStorageSpan.appendChild(RightArrow);
 
-    RightArrow.classList.add(ArrowClass)
-    LeftArrow.classList.add(ArrowClass)
-    RightArrow.classList.add(RightArrowClass)
-    LeftArrow.classList.add(LeftArrowClass)
+              // Add the specified classes to the arrows
+              LeftArrow.classList.add(ArrowClass, LeftArrowClass);
+              RightArrow.classList.add(ArrowClass, RightArrowClass);
 
-    
-  }else{
-    
+              // Add click event listeners to the arrows
+              LeftArrow.addEventListener("click", function() {
+                  console.log("Left click");
+              });
+
+              RightArrow.addEventListener("click", function() {
+                  console.log("Right click");
+              });
+          }
+      } else {
+          // If the window width is greater than 590 pixels, remove the arrows
+          LeftarrowStorageSpan.innerHTML = "";
+          RightarrowStorageSpan.innerHTML = "";
+      }
   }
 
-  LeftArrow.addEventListener("click", function() {
-    console.log("Left click")
+  // Run the function to handle arrow buttons initially
+  handleArrowButtons();
 
-
-  RightArrow.addEventListener("click", function() {
-    console.log("Right click")
-  })  })}
+  // Add an event listener to handle window resizing
+  window.addEventListener('resize', handleArrowButtons);
+}
 
 
 async function Show_that_pokemon() {

@@ -104,7 +104,6 @@ RandomBtn.addEventListener("click", () => {
   lastclicked = "Random"
   //poke_search_btn.style.backgroundColor ="red"
   Randomshowpokemon = true
-  console.log(lastclicked)
   Show_that_pokemon()
 })
 
@@ -331,7 +330,6 @@ async function Show_that_pokemon() {
 
 
       poketype.append(p)
-      console.log(PokemonType)
 
     })
 
@@ -492,79 +490,67 @@ async function Show_that_pokemon() {
       origin_game.style.color = "white"
       origin_game.style.fontWeight = "bold";
     //  dexbody.style.background = 'url("../imgs/redvblue.jpeg")'
-      console.log("worked")
     } else if (data.id >= 152 && data.id <= 251) {
       origin_game.textContent = "Generation II"
       origin_game.style.fontSize = "20px"
       origin_game.style.color = "white"
       origin_game.style.fontWeight = "bold";
      // dexbody.style.backgroundImage = 'url("../imgs/GoldandSliver.webp")'
-      console.log("worked")
     } else if (data.id >= 252 && data.id <= 386) {
       origin_game.textContent = "Generation III"
       origin_game.style.fontSize = "20px"
       origin_game.style.color = "white"
       origin_game.style.fontWeight = "bold";
     //  dexbody.style.backgroundImage = 'url("../imgs/RubyAndSapphire.jpg")'
-      console.log("worked")
     } else if (data.id >= 387 && data.id <= 493) {
       origin_game.textContent = "Generation IV"
       origin_game.style.fontSize = "20px"
       origin_game.style.color = "white"
       origin_game.style.fontWeight = "bold";
    //   dexbody.style.backgroundImage = 'url("../imgs/diamondAndPearl.webp")'
-      console.log("worked")
     } else if (data.id >= 494 && data.id <= 649) {
       origin_game.textContent = "Generation V"
       origin_game.style.fontSize = "20px"
       origin_game.style.color = "white"
       origin_game.style.fontWeight = "bold";
      // dexbody.style.backgroundImage = 'url("../imgs/blackAndWhite.jpg")'
-      console.log("worked")
     } else if (data.id >= 650 && data.id <= 721) {
       origin_game.textContent = "Generation VI"
       origin_game.style.fontSize = "20px"
       origin_game.style.color = "white"
       origin_game.style.fontWeight = "bold";
      // dexbody.style.backgroundImage = 'url("../imgs/XY.jpg")'
-      console.log("worked")
     } else if (data.id >= 722 && data.id <= 807) {
       origin_game.textContent = "Generation VII"
       origin_game.style.fontSize = "20px"
       origin_game.style.color = "white"
       origin_game.style.fontWeight = "bold";
      // dexbody.style.backgroundImage = 'url("../imgs/sunmoon.jpg")'
-      console.log("worked")
     } else if (data.id >= 810 && data.id <= 905) {
       origin_game.textContent = "Generation VIII"
       origin_game.style.fontSize = "20px"
       origin_game.style.color = "white"
       origin_game.style.fontWeight = "bold";
     //  dexbody.style.backgroundImage = 'url("../imgs/swordandshield.webp")'
-      console.log("worked")
     } else if (data.id >= 906 && data.id <= 1026) {
       origin_game.textContent = "Generation XI"
       origin_game.style.fontSize = "20px"
       origin_game.style.color = "white"
       origin_game.style.fontWeight = "bold";
      // dexbody.style.backgroundImage = 'url("../imgs/GoldandSliver.webp")'
-      console.log("worked")
     } //This code will give the genaration of the pokemon depending on their id
     //MELTAN CODE
     else if (data.id == 808) {
       origin_game.textContent = " Pokémon: Let's Go Pikachu/Eevee"
-      origin_game.style.fontSize = "20px"
+      origin_game.style.fontSize = "15px"
       origin_game.style.color = "white"
       origin_game.style.fontWeight = "bold";
 
-      console.log("worked")
     } else if (data.id == 809) {
       origin_game.textContent = " Pokémon: Let's Go Pikachu/Eevee"
-      origin_game.style.fontSize = "20px"
+      origin_game.style.fontSize = "15px"
       origin_game.style.color = "white"
       origin_game.style.fontWeight = "bold";
-      console.log("worked")
-      backgroundColor
     }
     //MELTAN CODE
 
@@ -576,21 +562,15 @@ async function Show_that_pokemon() {
 
 
 
-  //MOBILE OPTIMASTION CODE
-  
 
 }
-  //MOBILE OPTIMASTION CODE
 
 
 
 
   
 //WILL RESET ALL THE INFOMATION BACK TO THE START
-function resetPokemonInfo() {
-  console.log(showpokemon)
-  console.log(Randomshowpokemon)
-  console.log(Entershowpokemon)
+function resetPokemonInfo() { 
   LeftarrowStorageSpan.innerHTML = ""
   RightarrowStorageSpan.innerHTML = ""
   EnterText.textContent = "Enter a pokemon"
@@ -599,12 +579,12 @@ function resetPokemonInfo() {
   pokeball_red_Storage.innerHTML = '<img src="./imgs/poketop.png" class="img-fluid top-part" width="600px" id="poketop-red" alt="top">'
   pokeball_white_Storage.innerHTML = '<img src="./imgs/pokebottom.png" class="img-fluid bottom-part"  width="600px" alt="bottom">'
   pokeicon.innerHTML = ""; // Clear the pokemon icon
-  abilitylist.innerHTML = '<b><i style="font-size: 28px; text-decoration: underline;" >Abilites</i></b>'
-  poketype.innerHTML = '<p style="font-size: 28px;text-decoration: underline;"> <b><i>Types</i><b> </p>'; // Clear the pokemon types
+  abilitylist.innerHTML = '<span class="poppins-medium"><b style="font-size: 24px; text-decoration: underline;">Abilities</b></span>'
+  poketype.innerHTML = '<p style="font-size: 24px;text-decoration: underline; font-weight: 900;" class="poppins-medium"><b>Types</b></p>'; // Clear the pokemon types
   baseaddtotal.innerText = ""; // Reset base total text
   base_total = 0; // Reset base total
   stat_list = []; // Clear stat list
-  Helditems.innerHTML = '<p style="font-size: 26px; text-decoration: underline;"><b><i>Held Items</i></b></p>'
+  Helditems.innerHTML = '<p style="font-size: 24px; text-decoration: underline;" class="poppins-medium"><b>Held Items</b></p>'
   num_hp.textContent = "";
   num_atk.textContent = "";
   num_def.textContent = "";
@@ -617,7 +597,7 @@ function resetPokemonInfo() {
   special_atk.style.width = "0%";
   special_def.style.width = "0%";
   speed.style.width = "0%";
-  WeightOfPokemon.innerHTML = '<p style="font-size: 28px; text-decoration: underline;"><b>  <i>Weight</i></b></p>'; // Clear weight
+  WeightOfPokemon.innerHTML = '<p style="font-size: 24px; text-decoration: underline;" class="poppins-medium"><b>Weight</b></p>'; // Clear weight
   origin_game.textContent = ""; // Clear origin game
   spanHolderForbtn.innerHTML = "" //clear button
   RandomBtn.style.display = "inline"

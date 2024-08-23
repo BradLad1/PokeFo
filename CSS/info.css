@@ -116,16 +116,19 @@ body{
 
 
 /*=============================================ANIMATION========================================================*/
-.dex-body{
-    background-color: darkgray;
+#dex-body {
     height: 580px;
     width: 1000px;
     position: absolute;
     top: 100px;
     left: 290px;
-    border: 5px solid rgb(255, 255, 255);
-    border-radius: 5%;
+    border: 5px solid ;
+    background-color:red;
+    border-radius: 2%;
+    background-size: cover; /* Ensure the image covers the div */
+    background-repeat: no-repeat; /* Prevent tiling */
 }
+
 .hide-away{
     display: none;
 }
@@ -146,9 +149,10 @@ body{
 .pokeText{
     text-align: center ; 
     position: relative; 
-    left: -230px;
+    left: -240px;
     top: 3px; 
     font-size: 45px;
+
 }
 
 @keyframes Poketop {
@@ -212,7 +216,8 @@ body{
         position: absolute; 
         left: 170px;
         top:30px;
-        font-size:50px
+        font-size:50px;
+        color:white
         /*This text is for the main pokemon body section*/
     }
     .top-part{
@@ -300,7 +305,7 @@ body{
     .dex-body{
         height: 590px;
         width: 567px;
-        left: 0px;
+        left: 16px;
     }
 
     .iconsection{
@@ -314,7 +319,7 @@ body{
     }
 }
 
-
+///WWDDDT text
 @media screen and (max-width: 400px){
     body{
         background-color: rgb(255, 255, 107);

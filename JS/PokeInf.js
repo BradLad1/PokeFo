@@ -163,6 +163,7 @@ function Arrownbtns(ArrowClass, RightArrowClass, LeftArrowClass) {
   // Run the function to handle arrow buttons initially
   handleArrowButtons();
 
+ 
   // Add an event listener to handle window resizing
   window.addEventListener('resize', handleArrowButtons);
 }
@@ -221,8 +222,8 @@ async function Show_that_pokemon() {
     let Img = document.createElement("img")
     pokeicon.appendChild(Img)
     const pokemonSprite = data.sprites.front_default;
-    Img.style.scale = "2.3"
-    Img.style.scale = "2.3"
+    Img.style.scale = "2.5"
+    Img.style.scale = "2.5"
     Img.classList.add("icon")
     Img.src = pokemonSprite
 
@@ -423,7 +424,7 @@ async function Show_that_pokemon() {
       const li = document.createElement("li")
       li.innerText = Helditem.item.name
       li.style.color = "white"
-      li.style.fontWeight = "bold"
+      li.style.fontWeight = "900"
       li.style.fontSize = "20px"
       if (li.innerText == "") {
 
@@ -449,7 +450,7 @@ async function Show_that_pokemon() {
         li.innerText = Move.move.name + ":" + movemethod + "," + learnmove
         moveslist.appendChild(li)
         li.style.textAlign = "center"
-        console.log(Move.move)
+     
       }
 
      
@@ -490,54 +491,63 @@ async function Show_that_pokemon() {
       origin_game.style.fontSize = "20px"
       origin_game.style.color = "white"
       origin_game.style.fontWeight = "bold";
+    //  dexbody.style.background = 'url("../imgs/redvblue.jpeg")'
       console.log("worked")
     } else if (data.id >= 152 && data.id <= 251) {
       origin_game.textContent = "Generation II"
       origin_game.style.fontSize = "20px"
       origin_game.style.color = "white"
       origin_game.style.fontWeight = "bold";
+     // dexbody.style.backgroundImage = 'url("../imgs/GoldandSliver.webp")'
       console.log("worked")
     } else if (data.id >= 252 && data.id <= 386) {
       origin_game.textContent = "Generation III"
       origin_game.style.fontSize = "20px"
       origin_game.style.color = "white"
       origin_game.style.fontWeight = "bold";
+    //  dexbody.style.backgroundImage = 'url("../imgs/RubyAndSapphire.jpg")'
       console.log("worked")
     } else if (data.id >= 387 && data.id <= 493) {
       origin_game.textContent = "Generation IV"
       origin_game.style.fontSize = "20px"
       origin_game.style.color = "white"
       origin_game.style.fontWeight = "bold";
+   //   dexbody.style.backgroundImage = 'url("../imgs/diamondAndPearl.webp")'
       console.log("worked")
     } else if (data.id >= 494 && data.id <= 649) {
       origin_game.textContent = "Generation V"
       origin_game.style.fontSize = "20px"
       origin_game.style.color = "white"
       origin_game.style.fontWeight = "bold";
+     // dexbody.style.backgroundImage = 'url("../imgs/blackAndWhite.jpg")'
       console.log("worked")
     } else if (data.id >= 650 && data.id <= 721) {
       origin_game.textContent = "Generation VI"
       origin_game.style.fontSize = "20px"
       origin_game.style.color = "white"
       origin_game.style.fontWeight = "bold";
+     // dexbody.style.backgroundImage = 'url("../imgs/XY.jpg")'
       console.log("worked")
     } else if (data.id >= 722 && data.id <= 807) {
       origin_game.textContent = "Generation VII"
       origin_game.style.fontSize = "20px"
       origin_game.style.color = "white"
       origin_game.style.fontWeight = "bold";
+     // dexbody.style.backgroundImage = 'url("../imgs/sunmoon.jpg")'
       console.log("worked")
     } else if (data.id >= 810 && data.id <= 905) {
       origin_game.textContent = "Generation VIII"
       origin_game.style.fontSize = "20px"
       origin_game.style.color = "white"
       origin_game.style.fontWeight = "bold";
+    //  dexbody.style.backgroundImage = 'url("../imgs/swordandshield.webp")'
       console.log("worked")
     } else if (data.id >= 906 && data.id <= 1026) {
       origin_game.textContent = "Generation XI"
       origin_game.style.fontSize = "20px"
       origin_game.style.color = "white"
       origin_game.style.fontWeight = "bold";
+     // dexbody.style.backgroundImage = 'url("../imgs/GoldandSliver.webp")'
       console.log("worked")
     } //This code will give the genaration of the pokemon depending on their id
     //MELTAN CODE
@@ -546,6 +556,7 @@ async function Show_that_pokemon() {
       origin_game.style.fontSize = "20px"
       origin_game.style.color = "white"
       origin_game.style.fontWeight = "bold";
+
       console.log("worked")
     } else if (data.id == 809) {
       origin_game.textContent = " Pokémon: Let's Go Pikachu/Eevee"
@@ -574,12 +585,7 @@ async function Show_that_pokemon() {
 
 
 
-
-
-
-
-
-
+  
 //WILL RESET ALL THE INFOMATION BACK TO THE START
 function resetPokemonInfo() {
   console.log(showpokemon)

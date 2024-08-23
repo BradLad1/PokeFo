@@ -194,7 +194,7 @@ async function Show_that_pokemon() {
     }
 
 
-
+//good
     if (pokebutton == "") {
       nopokemon.innerText = "ENTER A NAME"
       showpokemon = false

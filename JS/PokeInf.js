@@ -124,6 +124,7 @@ const pokebutton = document.getElementById("poke-btn") //used to get the input f
 function Arrownbtns(ArrowClass, RightArrowClass, LeftArrowClass) {
   // Function to handle arrow buttons based on window width
   function handleArrowButtons() {
+    let displayValue =0
       // Get the current window width
       const windowWidth = window.innerWidth;
 

@@ -146,11 +146,14 @@ function Arrownbtns(ArrowClass, RightArrowClass, LeftArrowClass) {
 
               // Add click event listeners to the arrows
               LeftArrow.addEventListener("click", function() {
-                  console.log("Left click");
+                displayValue -=1
+                console.log(displayValue)
               });
 
               RightArrow.addEventListener("click", function() {
-                  console.log("Right click");
+                  displayValue +=1
+                  console.log(displayValue)
+
               });
           }
       } else {
@@ -167,6 +170,7 @@ function Arrownbtns(ArrowClass, RightArrowClass, LeftArrowClass) {
   // Add an event listener to handle window resizing
   window.addEventListener('resize', handleArrowButtons);
 }
+
 
 
 async function Show_that_pokemon() {
@@ -195,6 +199,9 @@ async function Show_that_pokemon() {
     }
 
 
+     
+   
+
 //good
     if (pokebutton == "") {
       nopokemon.innerText = "ENTER A NAME"
@@ -217,13 +224,20 @@ async function Show_that_pokemon() {
     }
 
     const data = await response.json()
+
+    //section for idnumber
+    const idval=  data.id
+    //value for the id number
+    let Idnumber= document.getElementById("IDNumber")
+    Idnumber.textContent="ID:"+idval
+    //section for idnumber
+
     console.log(data)
     //get the image
     let Img = document.createElement("img")
     pokeicon.appendChild(Img)
     const pokemonSprite = data.sprites.front_default;
-    Img.style.scale = "2.5"
-    Img.style.scale = "2.5"
+    Img.style.scale = "2"
     Img.classList.add("icon")
     Img.src = pokemonSprite
 

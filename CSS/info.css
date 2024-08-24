@@ -4,6 +4,7 @@ body{
     padding: 0;
     margin: 0;
     background-size: cover; /* Ensure the image covers the div */
+    background-repeat: no-repeat; /* Prevent tiling */
 }
 
 
@@ -302,7 +303,7 @@ body{
         bottom: 660px;
         left: 220px;
     }
-    .dex-body{
+    #dex-body{
         height: 590px;
         width: 567px;
         left: 16px;
@@ -317,6 +318,14 @@ body{
         position:relative;
         top:65px
     }
+
+
+.idtext{
+    position: absolute;
+    top: 105px;
+    left: 220px;
+    font-weight: 900;
+}
 }
 
 ///WWDDDT text

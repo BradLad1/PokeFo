@@ -175,6 +175,11 @@ left: 20px;}
     opacity:10.2%;
     
 }
+
+.stat-bar{
+    
+    transform:scale(0.69)
+    }
 }
 
 @media screen and (max-width: 400px){

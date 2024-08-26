@@ -129,7 +129,7 @@ function Arrownbtns(ArrowClass, RightArrowClass, LeftArrowClass) {
     const windowWidth = window.innerWidth; // Get the current window width
 
     // Check if the window width is 590 pixels or less
-    if (windowWidth <= 590) {
+    if (windowWidth <= 590 || windowWidth <=400) {
       // If the arrows don't already exist, create and append them
       if (!LeftarrowStorageSpan.querySelector("img")) {
         const LeftArrow = document.createElement("img");

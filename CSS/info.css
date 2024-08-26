@@ -322,9 +322,9 @@ body{
 
 
 .idtext{
-    position: absolute;
-    top:120px;
-    left: 220px;
+    position: relative;
+    top: -30px;
+    left: -200px;
     font-weight: 900;
 }
 }

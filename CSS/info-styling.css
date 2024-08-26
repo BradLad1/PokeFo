@@ -98,7 +98,7 @@ left: 20px;}
     background-color: #13e8e4;
     overflow-y: scroll;
     position: relative;
-    top: -140px;
+    top: -160px;
     left: 160px;
     border-radius: 2.8%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -130,7 +130,7 @@ left: 20px;}
     height: 323px;
     position: relative;
     left: 230px;
-    bottom: 145px;
+    bottom: 175px;
     border-radius: 5%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 
@@ -168,6 +168,9 @@ left: 20px;}
     opacity:10.2%;
     
 }
+.specialist-info{
+width:500px
+}
 
 .RightArrow:active{
     /*Going to be used for the clicking colour*/
@@ -180,6 +183,19 @@ left: 20px;}
     
     transform:scale(0.69)
     }
+
+
+.moves-list-class{
+    height: 208px;
+    width: 345px;
+    background-color: #13e8e4;
+    overflow-y: scroll;
+    position: relative;
+    top: -70px;
+    left: -90px;
+   
+}
+
 }
 
 @media screen and (max-width: 400px){

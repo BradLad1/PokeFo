@@ -120,56 +120,84 @@ const pokebutton = document.getElementById("poke-btn") //used to get the input f
 //===============VARIABLES =================
 
 
-
 function Arrownbtns(ArrowClass, RightArrowClass, LeftArrowClass) {
   // Function to handle arrow buttons based on window width
   function handleArrowButtons() {
-    let displayValue =0
-      // Get the current window width
-      const windowWidth = window.innerWidth;
+    let displayValue = 0; // Initialize displayValue to track which content to display
+    const statbar = document.querySelector(".stat-bar"); // Corrected selector for stat bar
+    const specialistinfo = document.querySelector(".specialist-info"); // Corrected selector for specialist info
+    const windowWidth = window.innerWidth; // Get the current window width
 
-      // Check if the window width is 590 pixels or less
-      if (windowWidth <= 590) {
-          // If the arrows don't already exist, create and append them
-          if (!LeftarrowStorageSpan.querySelector("img")) {
-              const LeftArrow = document.createElement("img");
-              LeftArrow.src = "imgs/LeftArrow.png";
-              LeftarrowStorageSpan.appendChild(LeftArrow);
+    // Check if the window width is 590 pixels or less
+    if (windowWidth <= 590) {
+      // If the arrows don't already exist, create and append them
+      if (!LeftarrowStorageSpan.querySelector("img")) {
+        const LeftArrow = document.createElement("img");
+        LeftArrow.src = "imgs/LeftArrow.png";
+        LeftarrowStorageSpan.appendChild(LeftArrow);
 
-              const RightArrow = document.createElement("img");
-              RightArrow.src = 'imgs/RightArrow.png';
-              RightarrowStorageSpan.appendChild(RightArrow);
+        const RightArrow = document.createElement("img");
+        RightArrow.src = 'imgs/RightArrow.png';
+        RightarrowStorageSpan.appendChild(RightArrow);
 
-              // Add the specified classes to the arrows
-              LeftArrow.classList.add(ArrowClass, LeftArrowClass);
-              RightArrow.classList.add(ArrowClass, RightArrowClass);
+        // Add the specified classes to the arrows
+        LeftArrow.classList.add(ArrowClass, LeftArrowClass);
+        RightArrow.classList.add(ArrowClass, RightArrowClass);
 
-              // Add click event listeners to the arrows
-              LeftArrow.addEventListener("click", function() {
-                displayValue -=1
-                console.log(displayValue)
-              });
-
-              RightArrow.addEventListener("click", function() {
-                  displayValue +=1
-                  console.log(displayValue)
-
-              });
+        // Function to update content display based on displayValue
+        function updateDisplay() {
+          switch (displayValue) {
+            case 0:
+              statbar.style.display = "block";
+              moveslist.style.display = "none";
+              specialistinfo.style.display = "none";
+              break;
+            case 1:
+              statbar.style.display = "none";
+              specialistinfo.style.display = "inline";
+              moveslist.style.display = "none";
+              break;
+            case 2:
+              specialistinfo.style.display = "none";
+              moveslist.style.display = "block";
+              statbar.style.display = "none";
+              break;
           }
-      } else {
-          // If the window width is greater than 590 pixels, remove the arrows
-          LeftarrowStorageSpan.innerHTML = "";
-          RightarrowStorageSpan.innerHTML = "";
+          if(windowWidth >=590){
+            resetPokemonInfo()
+          }
+        }
+
+        // Initial call to set the default display
+        updateDisplay();
+
+        // Add click event listeners to the arrows
+        LeftArrow.addEventListener("click", function () {
+          displayValue = (displayValue - 1 + 3) % 3; // Ensure the value wraps around
+          updateDisplay();
+        });
+
+        RightArrow.addEventListener("click", function () {
+          displayValue = (displayValue + 1) % 3; // Ensure the value wraps around
+          updateDisplay();
+        });
       }
+    } else {
+      // If the window width is greater than 590 pixels, remove the arrows
+      LeftarrowStorageSpan.innerHTML = "";
+      RightarrowStorageSpan.innerHTML = "";
+      moveslist.style.display ="block";
+      specialistinfo.style.display ="block";
+      statbar.style.display ="block";
+    }
   }
 
-  // Run the function to handle arrow buttons initially
+  // Call the function initially and on resize events
   handleArrowButtons();
-
- 
-  // Add an event listener to handle window resizing
   window.addEventListener('resize', handleArrowButtons);
 }
+
+
 
 
 

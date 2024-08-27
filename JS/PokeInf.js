@@ -154,7 +154,7 @@ function Arrownbtns(ArrowClass, RightArrowClass, LeftArrowClass) {
               break;
             case 1:
               statbar.style.display = "none";
-              specialistinfo.style.display = "inline";
+              specialistinfo.style.display = "block";
               moveslist.style.display = "none";
               break;
             case 2:

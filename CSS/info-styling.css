@@ -139,7 +139,7 @@ left: 20px;}
 
 /*spefic info*/
 
-@media only screen and (max-width: 590px) and (orientation: portrait) and (hover: none) and (pointer: coarse) {
+@media  screen and (max-width: 590px) and (orientation: portrait) and (hover: none) and (pointer: coarse) {
 
 
 .arrowbtns{
@@ -199,7 +199,7 @@ width:500px
 
 }
 
-@media only screen and (max-width: 400px) and (orientation: portrait) and (hover: none) and (pointer: coarse) {
+@media  screen and (max-width: 400px) and (orientation: portrait) and (hover: none) and (pointer: coarse) {
 
     .arrowbtns{
         position:relative;

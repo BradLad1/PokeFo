@@ -170,8 +170,7 @@ left: 20px;}
     
 }
 .specialist-info{
-width:500px
-}
+display:none}
 
 .RightArrow:active{
     /*Going to be used for the clicking colour*/

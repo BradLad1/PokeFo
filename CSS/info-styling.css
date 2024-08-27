@@ -141,6 +141,7 @@ left: 20px;}
 
 @media only screen and (max-width: 590px) and (orientation: portrait) and (hover: none) and (pointer: coarse) {
 
+
 .arrowbtns{
     position:relative;
    scale: 0.34;
@@ -234,4 +235,4 @@ width:500px
         opacity:10.2%;
         
     }
-    }
+}

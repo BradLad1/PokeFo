@@ -198,224 +198,200 @@ body{
 /*==================================================================MEDIA QUERY======================================================================================================*/
 
 
-
-@media screen and (max-width: 590px){
-    body{
-        background-color: rgb(255, 255, 107);
-        overflow.x: scroll
+/* General adjustments for screens 590px or less (typical small phones) */
+@media only screen and (max-width: 590px) and (orientation: portrait) and (hover: none) and (pointer: coarse) {
+    body {
+      background-color: rgb(255, 255, 107);
+      overflow-x: scroll; /* Corrected typo */
     }
-    .BigText{
-        position: absolute;
-        left: 130px;
-        font-size: 40px;
+  
+    .BigText {
+      position: relative;
+      left: 130px;
+      top: 65px; /* Merged into single declaration */
+      font-size: 40px;
     }
-    .stat-bar{
-        transform: scale(0.7);
-        margin-left: 20px;
+  
+    .stat-bar {
+      transform: scale(0.7);
+      margin-left: 20px;
     }
-
-    .pokeText{
+  
+    .pokeText {
       position: absolute; 
-        left: 150px;
-        top:30px;
-        font-size:50px;
-        color:white
-        /*This text is for the main pokemon body section*/
+      left: 150px;
+      top: 30px;
+      font-size: 50px;
+      color: white;
     }
-    .top-part{
-        position: absolute;
-        top:125px;
-        width: 430px;
-        left: 70px;
+  
+    .top-part {
+      position: absolute;
+      top: 125px;
+      width: 430px;
+      left: 70px;
     }
-    
-    .bottom-part{
-        position: absolute;
-        top: 327px;
-        left: 70px;
-        /*bottom part that will come apart*/
-        width: 430px;
+  
+    .bottom-part {
+      position: absolute;
+      top: 327px;
+      left: 70px;
+      width: 430px;
     }
-
-    #pokeget-btn{
-        position: absolute;
-        outline: none;
-        border: none;
-        border-radius: 50%;
-        bottom: -390px;
-        top: 550px;
-        left: 295px;
-        background-color: white;
-        font-size: 14px;
-        padding:12px;
-        width: 85px;
-        height: 85px;
+  
+    #pokeget-btn {
+      position: absolute;
+      outline: none;
+      border: none;
+      border-radius: 50%;
+      top: 550px;
+      left: 295px;
+      background-color: white;
+      font-size: 14px;
+      padding: 12px;
+      width: 85px;
+      height: 85px;
     }
-    .specialist-info{
+  
+    .specialist-info,
+    .moves-list-class {
       display: none;
     }
-    .moves-list-class{
-        display: none;
+  
+    .pokeget-random {
+      position: absolute;
+      outline: none;
+      border: none;
+      border-radius: 50%;
+      top: 550px;
+      left: 180px;
+      background-color: white;
+      font-size: 14px;
+      padding: 2px 12px;
+      width: 85px;
+      height: 85px;
     }
-    .pokeget-random{
-        position: absolute;
-        outline: none;
-        border: none;
-        border-radius: 50%;
-        bottom: -390px;
-        top: 550px;
-        left: 180px;
-        background-color: white;
-        font-size: 14px;
-        padding-left: 12px;
-        padding-right: 12px;
-        padding-top: 2px;
-        padding-bottom: 2px;
-        width: 85px;
-        height: 85px;
-
+  
+    .pokeget-random:hover,
+    #pokeget-btn:hover {
+      background-color: rgb(11, 11, 11);
+      border: 3.2px solid red;
+      color: white;
+      font-size: 14px;
     }
-    .pokeget-random:hover{
-        background-color: rgb(11, 11, 11);
-        border: 3.2px solid red;
-        color: white;
-        font-size: 14px;
+  
+    .idtext {
+      position: relative;
+      top: -30px;
+      left: -190px;
+      font-weight: 900;
     }
-    .idtext{
-        position: relative;
-        top: -30px;
-        left: -190px;
-        font-weight: 900;
+  
+    .poke-btn {
+      border-radius: 70%;
+      width: 120px;
+      height: 113px;
+      position: absolute;
+      top: 272px;
+      left: 225px;
+      z-index: 1;
+      font-size: 10px;
     }
-
-
-    #pokeget-btn:hover{
-        background-color: rgb(11, 11, 11);
-        border: 3.2px solid red;
-        color: white;
-        font-size: 14px;
+  
+    .pokeget-GoBack {
+      bottom: 660px;
+      left: 220px;
     }
-
-    .poke-btn{
-        border-radius: 70%; /* Ensures the element is a perfect circle */
-         /* Adjust the padding as needed */
-        width: 120px; /* Set the width and height to be equal */
-        height: 113px; /* Set the width and height to be equal */
-        position: absolute;
-        top: 272px;
-        left: 225px;
-        z-index: 1;
-        font-size: 10px;
+  
+    #dex-body {
+      height: 590px;
+      width: 567px;
+      left: 16px;
     }
-    .pokeget-GoBack{
-        bottom: 660px;
-        left: 220px;
+  
+    .iconsection {
+      position: relative;
+      top: -185px;
+      transform: scale(1.1); /* Corrected to use transform */
     }
-    #dex-body{
-        height: 590px;
-        width: 567px;
-        left: 16px;
+  }
+  
+  /* Specific adjustments for even smaller screens (less than 400px, very small phones) */
+  @media only screen and (max-width: 400px) and (orientation: portrait) and (hover: none) and (pointer: coarse) {
+    body {
+      background-color: rgb(255, 255, 107);
     }
-
-    .iconsection{
-        position:relative;
-        top:-185px;
-        scale:1.1
+  
+    h1.BigText {
+      font-size: 30px;
     }
-    .BigText{
-        position:relative;
-        top:65px
+  
+    .top-part {
+      position: absolute;
+      top: 195px;
+      left: 30px;
+      width: 320px;
     }
-
-
-
-
-///WWDDDT text
-@media screen and (max-width: 400px){
-    body{
-        background-color: rgb(255, 255, 107);
+  
+    .idtext {
+      position: relative;
+      top: -30px;
+      left: 20px;
+      font-weight: 900;
     }
-    h1.BigText{
-        font-size: 30px;
+  
+    .bottom-part {
+      position: absolute;
+      top: 348px;
+      left: 30px;
+      width: 320px;
     }
-
-    .top-part{
-        position: absolute;
-        top:195px;
-        left: 30px;
-        width: 320px;
-        /*top part that will come apart*/
-    
+  
+    .poke-btn {
+      border-radius: 70%;
+      width: 91px;
+      height: 89px;
+      position: absolute;
+      top: 302px;
+      left: 144px;
+      z-index: 1;
+      font-size: 9px;
     }
-    .idtext{
-        position: relative;
-        top: -30px;
-        left: 20px;
-        font-weight: 900;
+  
+    #pokeget-btn,
+    .pokeget-random {
+      position: relative;
+      outline: none;
+      border: none;
+      border-radius: 50%;
+      top: 530px;
+      background-color: white;
+      font-size: 13px;
+      padding: 10px;
     }
+  
+    #pokeget-btn {
+      left: 15px;
     }
-    .bottom-part{
-        position: absolute;
-        top: 348px;
-        left: 30px;
-        width: 320px;
-        /*bottom part that will come apart*/
+  
+    .pokeget-random {
+      left: 150px;
     }
-
-    .poke-btn{
-        border-radius: 70%; /* Ensures the element is a perfect circle */
-         /* Adjust the padding as needed */
-        width: 91px; /* Set the width and height to be equal */
-        height: 89px; /* Set the width and height to be equal */
-        position: absolute;
-        top: 302px;
-        left: 144px;
-        z-index: 1;
-        font-size: 9px;
+  
+    #pokeget-btn:hover,
+    .pokeget-random:hover {
+      background-color: rgb(11, 11, 11);
+      border: 3.2px solid red;
+      color: white;
+      font-size: 11px;
     }
-
-    #pokeget-btn{
-        position: relative;
-        outline: none;
-        border: none;
-        border-radius: 50%;
-        top: 530px;
-        left: 15px;
-        background-color: white;
-        font-size: 13px;
-        padding: 10px;
-    }
-    .pokeget-random{
-        position: relative;
-        outline: none;
-        border: none;
-        border-radius: 50%;
-        top: 530px;
-        left: 150px;
-        background-color: white;
-        font-size: 13px;
-        padding: 10px;
-    }
-    
-    #pokeget-btn:hover{
-        background-color: rgb(11, 11, 11);
-        border: 3.2px solid red;
-        color: white;
-        font-size: 11px;
-    }
-
-    .pokeget-random:hover{
-        background-color: rgb(11, 11, 11);
-        border: 3.2px solid red;
-        color: white;
-        font-size: 11px;
-    }
-    
+  }
+  
 
     
 /*===============MOBILE PHONE VERSION OF INFO CARD================*/
 
-}
+
 
 
 @media screen and (max-width: 240px){

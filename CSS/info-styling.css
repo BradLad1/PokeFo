@@ -235,4 +235,11 @@ width:500px
         opacity:10.2%;
         
     }
+
+    .moves-list-class{
+     display:none
+    }
+    .specialist-info{
+        display:none
+        }
 }

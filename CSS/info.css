@@ -199,7 +199,7 @@ body{
 
 
 /* General adjustments for screens 590px or less (typical small phones) */
-@media  screen  {
+@media (min-width:590px) {
     body {
       background-color: rgb(255, 255, 107);
     }
@@ -316,7 +316,7 @@ body{
   }
   
   /* Specific adjustments for even smaller screens (less than 400px, very small phones) */
-  @media  screen  {
+  @media (min-width:400px) {
     body {
       background-color: rgb(255, 255, 107);
     }

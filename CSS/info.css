@@ -1,9 +1,9 @@
 body{
-    background-image: url("../imgs/c.jpg");
+   /* background-image: url("../imgs/c.jpg");*/
     background-size:150px;
     padding: 0;
     margin: 0;
-    background-size: cover; /* Ensure the image covers the div */
+  /*  background-size: cover;  Ensure the image covers the div */
 
 }
 
@@ -199,7 +199,7 @@ body{
 
 
 /* General adjustments for screens 590px or less (typical small phones) */
-@media (min-width:590px) {
+@media (max-width:590px) {
     body {
       background-color: rgb(255, 255, 107);
     }
@@ -252,7 +252,7 @@ body{
       height: 85px;
     }
   
-    .specialist-info,
+    
     .moves-list-class {
       display: none;
     }
@@ -282,7 +282,7 @@ body{
     .idtext {
       position: relative;
       top: -30px;
-      left: -190px;
+      left: -200px;
       font-weight: 900;
     }
   
@@ -303,8 +303,8 @@ body{
     }
   
     #dex-body {
-      height: 590px;
-      width: 567px;
+      height: 620px;
+      width: 580px;
       left: 16px;
     }
   
@@ -316,7 +316,7 @@ body{
   }
   
   /* Specific adjustments for even smaller screens (less than 400px, very small phones) */
-  @media (min-width:400px) {
+  @media (max-width:400px) {
     body {
       background-color: rgb(255, 255, 107);
     }

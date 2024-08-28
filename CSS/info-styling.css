@@ -170,10 +170,13 @@ left: 20px;}
     
 }
 .specialist-info{
-display:none
-
+display:none;
+width:390px;
+left: 100px;
 }
-
+.specialist-info span, p, ul{
+font-size:12px
+}
 .RightArrow:active{
     /*Going to be used for the clicking colour*/
     background-color:white;
@@ -191,7 +194,7 @@ display:none
     height: 208px;
     width: 345px;
     background-color: #13e8e4;
-    overflow-y: scroll;
+    flow-y: scroll;
     position: relative;
     top: -70px;
     left: -90px;

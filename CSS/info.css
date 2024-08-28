@@ -4,7 +4,8 @@ body{
     padding: 0;
     margin: 0;
   /*  background-size: cover;  Ensure the image covers the div */
-
+    overflow:hidden;
+    background-color: rgb(255, 255, 107)
 }
 
 
@@ -201,7 +202,8 @@ body{
 /* General adjustments for screens 590px or less (typical small phones) */
 @media (max-width:590px) {
     body {
-      background-color: rgb(255, 255, 107);
+     /* background-color: rgb(255, 255, 107);*/
+      
     }
   
     .BigText {
@@ -219,7 +221,7 @@ body{
     .pokeText {
       position: absolute; 
       left: 150px;
-      top: 30px;
+      top: 925px;
       font-size: 50px;
       color: white;
     }
@@ -244,7 +246,7 @@ body{
       border: none;
       border-radius: 50%;
       top: 550px;
-      left: 295px;
+      left: 125px;
       background-color: white;
       font-size: 14px;
       padding: 12px;
@@ -263,7 +265,7 @@ body{
       border: none;
       border-radius: 50%;
       top: 550px;
-      left: 180px;
+      left: 380px;
       background-color: white;
       font-size: 14px;
       padding: 2px 12px;
@@ -317,9 +319,6 @@ body{
   
   /* Specific adjustments for even smaller screens (less than 400px, very small phones) */
   @media (max-width:400px) {
-    body {
-      background-color: rgb(255, 255, 107);
-    }
   
     h1.BigText {
       font-size: 30px;
@@ -363,18 +362,18 @@ body{
       outline: none;
       border: none;
       border-radius: 50%;
-      top: 530px;
+      top: 460px;
       background-color: white;
       font-size: 13px;
       padding: 10px;
     }
   
     #pokeget-btn {
-      left: 15px;
+      left: 45px;
     }
   
     .pokeget-random {
-      left: 150px;
+      left: 250px;
     }
   
     #pokeget-btn:hover,

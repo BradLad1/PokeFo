@@ -242,7 +242,7 @@ body{
     }
   
     #pokeget-btn {
-      position: absolute;
+      position: relative;
       outline: none;
       border: none;
       border-radius: 50%;
@@ -261,7 +261,7 @@ body{
     }
   
     .pokeget-random {
-      position: absolute;
+      position: relative;
       outline: none;
       border: none;
       border-radius: 50%;

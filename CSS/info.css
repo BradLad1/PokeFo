@@ -3,6 +3,7 @@ body{
     background-size:150px;
     padding: 0;
     margin: 0;
+    width:900px;
   /*  background-size: cover;  Ensure the image covers the div */
  /*    overflow-X:scroll;*/ 
     background-color: rgb(255, 255, 107)
@@ -247,7 +248,7 @@ body{
       border: none;
       border-radius: 50%;
       top: 550px;
-      left: 125px;
+      left: 55px;
       background-color: white;
       font-size: 14px;
       padding: 12px;

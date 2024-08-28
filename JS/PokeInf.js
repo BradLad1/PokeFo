@@ -166,9 +166,9 @@ function Arrownbtns(ArrowClass, RightArrowClass, LeftArrowClass) {
       // Reset and remove arrows if window width exceeds 590px
       LeftarrowStorageSpan.innerHTML = "";
       RightarrowStorageSpan.innerHTML = "";
-      statbar.style.display = "block";
-      specialistinfo.style.display = "block";
-      moveslist.style.display = "block";
+      statbar.style.display = "none";
+      specialistinfo.style.display = "none";
+      moveslist.style.display = "none";
     }
   }
 

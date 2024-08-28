@@ -203,7 +203,7 @@ body{
 @media (max-width:590px) {
     body {
      /* background-color: rgb(255, 255, 107);*/
-      
+    height:600px
     }
   
     .BigText {

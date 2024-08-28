@@ -200,7 +200,7 @@ display:none
 
 }
 
-@media  screen and (max-width: 400px)  {
+@media  only screen and (max-width: 400px)  {
 
     .arrowbtns{
         position:relative;

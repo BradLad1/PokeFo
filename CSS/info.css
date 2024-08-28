@@ -199,10 +199,9 @@ body{
 
 
 /* General adjustments for screens 590px or less (typical small phones) */
-@media  screen and (max-width: 590px) and (orientation: portrait) and (hover: none) and (pointer: coarse) {
+@media  screen  {
     body {
       background-color: rgb(255, 255, 107);
-      overflow-x: scroll; /* Corrected typo */
     }
   
     .BigText {
@@ -317,7 +316,7 @@ body{
   }
   
   /* Specific adjustments for even smaller screens (less than 400px, very small phones) */
-  @media  screen and (max-width: 400px) and (orientation: portrait) and (hover: none) and (pointer: coarse) {
+  @media  screen  {
     body {
       background-color: rgb(255, 255, 107);
     }

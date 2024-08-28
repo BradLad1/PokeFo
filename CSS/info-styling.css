@@ -106,7 +106,9 @@ left: 20px;}
 
 }
 
-
+.moves-list-class, .weight, .Held-item, .abilites-section, .genartioninfo, .poke-type{
+    font-size:24px
+}
 
 
 .weight{
@@ -133,7 +135,7 @@ left: 20px;}
     bottom: 175px;
     border-radius: 5%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-
+    
 }
 
 
@@ -171,12 +173,15 @@ left: 20px;}
 }
 .specialist-info{
 display:none;
-width:390px;
-left: 100px;
-}
-.specialist-info span, p, ul{
+width:380px;
+left: 1px;
 font-size:12px
 }
+.abilites-section span b {
+font-size:12px
+}
+
+
 .RightArrow:active{
     /*Going to be used for the clicking colour*/
     background-color:white;
@@ -199,6 +204,9 @@ font-size:12px
     top: -70px;
     left: -90px;
    
+}
+.moves-list-class, .weight, .Held-item, .abilites-section, .genartioninfo, .poke-type{
+    font-size:12px
 }
 
 }

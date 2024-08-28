@@ -4,7 +4,7 @@ body{
     padding: 0;
     margin: 0;
   /*  background-size: cover;  Ensure the image covers the div */
-    overflow:hidden;
+    overflow-X:scroll;
     background-color: rgb(255, 255, 107)
 }
 
@@ -222,7 +222,7 @@ body{
     .pokeText {
       position: absolute; 
       left: 150px;
-      top: 925px;
+      top: 25px;
       font-size: 50px;
       color: white;
     }

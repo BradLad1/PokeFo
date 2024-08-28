@@ -167,8 +167,7 @@ left: 20px;}
 
 .LeftArrow:active{
     /*Going to be used for the clicking colour*/
-    background-color:white;
-    opacity:10.2%;
+    opacity:0.2%;
     
 }
 .specialist-info{
@@ -184,8 +183,7 @@ font-size:12px
 
 .RightArrow:active{
     /*Going to be used for the clicking colour*/
-    background-color:white;
-    opacity:10.2%;
+    opacity:0.2%;
     
 }
 

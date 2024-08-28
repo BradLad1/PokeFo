@@ -211,6 +211,7 @@ body{
       left: 130px;
       top: 65px; /* Merged into single declaration */
       font-size: 40px;
+      color:whitesmoke
     }
   
     .stat-bar {
@@ -357,24 +358,9 @@ body{
     }
   
    
-    .pokeget-random {
-      position: relative;
-      outline: none;
-      border: none;
-      border-radius: 50%;
-      top: 460px;
-      background-color: white;
-      font-size: 13px;
-      padding: 10px;
-    }
-  
-    #pokeget-btn {
-      left: 45px;
-    }
-  
-    .pokeget-random {
-      left: 250px;
-    }
+
+ 
+    
   
     #pokeget-btn:hover,
     .pokeget-random:hover {

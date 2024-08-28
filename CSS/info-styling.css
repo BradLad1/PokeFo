@@ -139,7 +139,7 @@ left: 20px;}
 
 /*spefic info*/
 
-@media  screen and (max-width: 590px) and (orientation: portrait) and (hover: none) and (pointer: coarse) {
+@media  screen and (max-width: 590px)  {
 
 
 .arrowbtns{
@@ -170,7 +170,9 @@ left: 20px;}
     
 }
 .specialist-info{
-display:none}
+display:none
+
+}
 
 .RightArrow:active{
     /*Going to be used for the clicking colour*/
@@ -198,7 +200,7 @@ display:none}
 
 }
 
-@media  screen and (max-width: 400px) and (orientation: portrait) and (hover: none) and (pointer: coarse) {
+@media  screen and (max-width: 400px)  {
 
     .arrowbtns{
         position:relative;

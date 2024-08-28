@@ -186,9 +186,9 @@ function Arrownbtns(ArrowClass, RightArrowClass, LeftArrowClass) {
       // If the window width is greater than 590 pixels, remove the arrows
       LeftarrowStorageSpan.innerHTML = "";
       RightarrowStorageSpan.innerHTML = "";
-      moveslist.style.display ="block";
-      specialistinfo.style.display ="block";
-      statbar.style.display ="block";
+    //  moveslist.style.display ="block";
+      //specialistinfo.style.display ="block";
+      //statbar.style.display ="block";
     }
   }
 

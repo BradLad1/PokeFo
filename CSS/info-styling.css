@@ -172,7 +172,8 @@ left: 20px;}
 }
 .specialist-info{
 display:none;
-width:380px;
+width:340px;
+height:308px;
 left: 1px;
 bottom:100px
 }
@@ -227,14 +228,14 @@ bottom:100px
     
     .RightArrow{
         position:relative;
-        left:-70px;
+        left:-67px;
         top:290px;    
         cursor:pointer
     }
     
     .LeftArrow{
         position:relative;
-        left:180px;
+        left:170px;
         top:290px;
         cursor:pointer
     }

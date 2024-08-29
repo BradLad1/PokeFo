@@ -174,11 +174,9 @@ left: 20px;}
 display:none;
 width:380px;
 left: 1px;
-font-size:12px
+bottom:100px
 }
-.abilites-section span b {
-font-size:12px
-}
+
 
 
 .RightArrow:active{
@@ -188,9 +186,18 @@ font-size:12px
 }
 
 .stat-bar{
-    
     transform:scale(0.69)
-    }
+}
+
+.Held-item{
+    position: absolute;
+    top: 210px;
+    left: 180px;
+}
+
+.abilites-section{
+    left:190px
+}
 
 
 .moves-list-class{
@@ -204,12 +211,12 @@ font-size:12px
    
 }
 .moves-list-class, .weight, .Held-item, .abilites-section, .genartioninfo, .poke-type{
-    font-size:12px
+    font-size:22px
 }
 
 }
 
-@media    (max-width: 400px)  {
+@media (max-width: 400px)  {
 
     .arrowbtns{
         position:relative;

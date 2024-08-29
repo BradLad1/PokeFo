@@ -204,8 +204,8 @@ body{
 @media (max-width:590px) {
     body {
      /* background-color: rgb(255, 255, 107);*/
-    height:600px;
-    width:480px;
+    height:400px;
+    width:400px;
 
     }
   
@@ -249,8 +249,8 @@ body{
       outline: none;
       border: none;
       border-radius: 50%;
-      top: 550px;
-      left: 55px;
+      top: 500px;
+      left: 125px;
       background-color: white;
       font-size: 14px;
       padding: 2px 12px;
@@ -268,8 +268,8 @@ body{
       outline: none;
       border: none;
       border-radius: 50%;
-      top: 550px;
-      left: 180px;
+      top: 500px;
+      left: 240px;
       background-color: white;
       font-size: 14px;
       padding: 2px 12px;
@@ -338,7 +338,7 @@ body{
     .idtext {
       position: relative;
       top: -30px;
-      left: -180px;
+      left: -80px;
       font-weight: 900;
     }
   
@@ -362,8 +362,8 @@ body{
   
     #dex-body {
       height: 620px;
-      width: 530px;
-      left: 16px;
+      width: 380px;
+      left: 0px;
     }
 
  

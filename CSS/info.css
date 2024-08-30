@@ -131,6 +131,12 @@ body{
     background-size: cover; /* Ensure the image covers the div */
     background-repeat: no-repeat; /* Prevent tiling */
 }
+.iconsection {
+  position: relative;
+  top:25px;
+  left: 125px;
+  transform: scale(.81); /* Corrected to use transform */
+}
 
 .hide-away{
     display: none;
@@ -244,20 +250,6 @@ body{
       width: 430px;
     }
   
-    #pokeget-btn {
-      position: relative;
-      outline: none;
-      border: none;
-      border-radius: 50%;
-      top: 500px;
-      left: 125px;
-      background-color: white;
-      font-size: 14px;
-      padding: 2px 12px;
-      width: 75px;
-      height: 75px;
-    }
-  
     
     .moves-list-class {
       display: none;
@@ -314,20 +306,23 @@ body{
       left: 16px;
     }
   
-    .iconsection {
-      position: relative;
-      top: -185px;
-      transform: scale(0.71); /* Corrected to use transform */
-    }
+  
   }
   
   /* Specific adjustments for even smaller screens (less than 400px, very small phones) */
   @media (max-width:400px) {
-  
+    body {
+      /* background-color: rgb(255, 255, 107);*/
+     height:400px;
+     width:400px;
+ 
+     }
     h1.BigText {
       font-size: 30px;
     }
-  
+    .pokeText{
+      left:50px
+    }
     .top-part {
       position: absolute;
       top: 195px;
@@ -337,8 +332,8 @@ body{
   
     .idtext {
       position: relative;
-      top: -30px;
-      left: -80px;
+      top: -310px;
+      left: -50px;
       font-weight: 900;
     }
   
@@ -362,13 +357,35 @@ body{
   
     #dex-body {
       height: 620px;
-      width: 380px;
+      width: 400px;
       left: 0px;
     }
 
- 
+    .iconsection {
+      position: relative;
+      top:-415px;
+      left: 95px;
+      transform: scale(0.71); /* Corrected to use transform */
+    }
     
-  
+      
+
+    #pokeget-btn {
+      position: relative;
+      outline: none;
+      border: none;
+      border-radius: 50%;
+      top: 500px;
+      left: 55px;
+      background-color: white;
+      font-size: 14px;
+      padding: 2px 12px;
+      width: 75px;
+      height: 75px;
+    }
+    .pokeget-random{
+      left:150px
+    }  
     #pokeget-btn:hover,
     .pokeget-random:hover {
       background-color: rgb(11, 11, 11);
@@ -385,8 +402,6 @@ body{
 
 
 
-@media screen and (max-width: 240px){
-}
 
 
 /*Add a media query for a galaxy fold it would be at 280px*/

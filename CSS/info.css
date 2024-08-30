@@ -318,10 +318,12 @@ body{
  
      }
     h1.BigText {
-      font-size: 30px;
+      font-size: 35px;
+      left:36px;
+      top:72px
     }
     .pokeText{
-      left:50px
+      left:80px
     }
     .top-part {
       position: absolute;
@@ -333,7 +335,7 @@ body{
     .idtext {
       position: relative;
       top: -310px;
-      left: -50px;
+      left:-52px;
       font-weight: 900;
     }
   
@@ -357,7 +359,7 @@ body{
   
     #dex-body {
       height: 620px;
-      width: 400px;
+      width: 395px;
       left: 0px;
     }
 

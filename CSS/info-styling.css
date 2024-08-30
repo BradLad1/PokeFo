@@ -250,7 +250,14 @@ bottom:100px
     }
 
     .moves-list-class{
+    
      display:none
+    }
+
+    .moves-list-class{
+        position: relative;
+        top: 70px;
+        left: 90px
     }
     .specialist-info{
         display:none

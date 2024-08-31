@@ -312,10 +312,10 @@ body{
   /* Specific adjustments for even smaller screens (less than 400px, very small phones) */
   @media (max-width:400px) {
     body {
-      /* background-color: rgb(255, 255, 107);*/
+      /* background-color: rgb(255, 255, 107);
      height:400px;
-     width:400px;
- 
+     width:400px;*/
+      overflow:hidden
      }
     h1.BigText {
       font-size: 35px;

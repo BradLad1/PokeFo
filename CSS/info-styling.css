@@ -93,7 +93,7 @@ left: 20px;}
     background-color: #13e8e4;
     overflow-y: scroll;
     position: relative;
-    top: -160px;
+    top: -170px;
     left: 160px;
     border-radius: 2.8%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -127,7 +127,7 @@ left: 20px;}
     height: 323px;
     position: relative;
     left: 230px;
-    bottom: 175px;
+    bottom: 190px;
     border-radius: 5%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     
@@ -223,28 +223,27 @@ bottom:100px
     
     .RightArrow{
         position:relative;
-        left:-67px;
-        top:590px;    
+        left:-57px;
+        top:400px;    
         cursor:pointer
     }
     
     .LeftArrow{
         position:relative;
-        left:170px;
-        top:590px;
+        left:240px;
+        top:117px;
         cursor:pointer
     }
     
     .LeftArrow:active{
         /*Going to be used for the clicking colour*/
-        background-color:white;
         opacity:10.2%;
         
     }
     
     .RightArrow:active{
         /*Going to be used for the clicking colour*/
-        background-color:white;
+       
         opacity:10.2%;
         
     }
@@ -256,17 +255,19 @@ bottom:100px
 
     .moves-list-class{
         position: relative;
-        top: 70px;
-        left: 90px
+        top: -550px;
+        left: -110px
     }
     .specialist-info{
-        display:none
+        display:none;
+        bottom: 570px;
+        left: 0px
         }
 
 
 .stat-bar{
-    bottom:20px;
-    left: -80px;
+    bottom:56px;
+    left: -56px;
    
     }
 }

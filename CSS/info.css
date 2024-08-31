@@ -49,12 +49,12 @@ body{
 /*This is for the SEARCH button*/
 
 #pokeget-btn{
-    position: relative;
+    position: absolute;
     outline: none;
     border: none;
     border-radius: 70%;
     height: 105px;
-    bottom: -330px;
+    top: 30px;
     left: 223px;
     background-color: white;
     font-size: 18px;
@@ -75,9 +75,9 @@ body{
     position: absolute;
     outline: none;
     border: none;
-    border-radius: 50%;
-    bottom: 350px;
-    left: 60px;
+    border-radius: 20%;
+    top: 450px;
+    left: -80px;
     background-color: white;
     font-size: 18px;
     padding: 20px;
@@ -95,16 +95,16 @@ body{
 /*This is for the random button*/
 
 .pokeget-random{
-    position: relative;
+    position: absolute;
     outline: none;
     border: none;
     border-radius: 70%;
     height: 105px;
-    bottom: -460px;
+    bottom: 90px;
     left: 110px;
     background-color: white;
     font-size: 18px;
-    padding: 16px;
+    padding: 2px 12px;
 }
 
 .pokeget-random:hover{
@@ -206,11 +206,11 @@ body{
 /*==================================================================MEDIA QUERY======================================================================================================*/
 
 
-/* General adjustments for screens 590px or less (typical small phones) */
+/* General adjustments for screens 590px or less (typical small phones) 
 @media (max-width:590px) {
-    body {
+  /*  body {
      /* background-color: rgb(255, 255, 107);*/
-    height:400px;
+   /* height:400px;
     width:400px;
 
     }
@@ -219,7 +219,7 @@ body{
       position: relative;
       left: 130px;
       top: 65px; /* Merged into single declaration */
-      font-size: 40px;
+   /*   font-size: 40px;
       color:whitesmoke
     }
   
@@ -231,7 +231,7 @@ body{
     .pokeText {
       position: absolute; 
       left: 150px;
-      top: 25px;
+      top: 4px;
       font-size: 50px;
       color: white;
     }
@@ -296,8 +296,8 @@ body{
     }
   
     .pokeget-GoBack {
-      bottom: 690px;
-      left: 220px;
+      bottom: 700px;
+      left: 140px;
     }
   
     #dex-body {
@@ -307,7 +307,7 @@ body{
     }
   
   
-  }
+  }*/
   
   /* Specific adjustments for even smaller screens (less than 400px, very small phones) */
   @media (max-width:400px) {
@@ -323,7 +323,8 @@ body{
       top:72px
     }
     .pokeText{
-      left:80px
+      left:0px;
+      top:-563px
     }
     .top-part {
       position: absolute;
@@ -334,8 +335,8 @@ body{
   
     .idtext {
       position: relative;
-      top: -310px;
-      left:-52px;
+      top: -565px;
+      left:152px;
       font-weight: 900;
     }
   
@@ -359,16 +360,16 @@ body{
   
     #dex-body {
       height: 620px;
-      width: 395px;
+      width: 405px;
       left: 0px;
     }
 
     .iconsection {
       position: relative;
-      top:-415px;
+      top:-560px;
       left: 95px;
       transform: scale(0.71); /* Corrected to use transform */
-    }
+    } 
     
       
 
@@ -377,27 +378,57 @@ body{
       outline: none;
       border: none;
       border-radius: 50%;
-      top: 500px;
-      left: 55px;
+      top: 470px;
+      left: 25px;
       background-color: white;
       font-size: 14px;
       padding: 2px 12px;
       width: 75px;
       height: 75px;
     }
-    .pokeget-random{
-      left:150px
+     .pokeget-random {
+      position: relative;
+   
+      border-radius: 50%;
+      top: 470px;
+      left: 165px;
+      background-color: white;
+      font-size: 14px;
+      padding: 2px 1px;
+      width: 75px;
+      height: 75px;
     }  
-    #pokeget-btn:hover,
-    .pokeget-random:hover {
+    #pokeget-btn:hover {
       background-color: rgb(11, 11, 11);
       border: 3.2px solid red;
       color: white;
-      font-size: 11px;
+      font-size: 14px;
     }
+
+    #pokeget-random:hover {
+      background-color: rgb(11, 11, 11);
+      border: 3.2px solid red;
+      color: white;
+      font-size: 14px;    
+    }
+ #basetotal{
+  position:relative;
+  left:80px;
+  top:10px
+ }
+   
   }
   
-
+  .pokeget-GoBack {
+    top: 600px;
+    left: 160px;
+    border-radius: 100%;
+    width:75px;
+    height:75px;
+  
+  
+    padding: 5px 7px;
+    }
     
 /*===============MOBILE PHONE VERSION OF INFO CARD================*/
 

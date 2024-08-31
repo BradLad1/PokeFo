@@ -314,6 +314,7 @@ body{
     body {
       /* background-color: rgb(255, 255, 107);*/
      height:400px;
+     width:400px;
  
      }
     h1.BigText {
@@ -333,9 +334,9 @@ body{
     }
   
     .idtext {
-      position: relative;
-      top: -565px;
-      left:152px;
+      position: absolute;
+      top: 65px;
+      left:158px;
       font-weight: 900;
     }
   
@@ -365,7 +366,7 @@ body{
 
     .iconsection {
       position: relative;
-      top:-560px;
+      top:-520px;
       left: 95px;
       transform: scale(0.71); /* Corrected to use transform */
     } 

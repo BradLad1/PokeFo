@@ -132,7 +132,7 @@ body{
     background-repeat: no-repeat; /* Prevent tiling */
 }
 .iconsection {
-  position: relative;
+  position: absolute;
   top:25px;
   left: 125px;
   transform: scale(.81); /* Corrected to use transform */
@@ -335,8 +335,8 @@ body{
   
     .idtext {
       position: absolute;
-      top: 65px;
-      left:158px;
+      top: 55px;
+      left:169px;
       font-weight: 900;
     }
   
@@ -367,8 +367,8 @@ body{
     .iconsection {
       position: relative;
       top:-520px;
-      left: 95px;
-      transform: scale(0.71); /* Corrected to use transform */
+      left: 125px;
+      transform: scale(0.85); /* Corrected to use transform */
     } 
     
       
@@ -420,7 +420,7 @@ body{
   }
   
   .pokeget-GoBack {
-    top: 600px;
+    top: 610px;
     left: 160px;
     border-radius: 100%;
     width:75px;

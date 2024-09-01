@@ -198,7 +198,7 @@ bottom:100px
 
 .moves-list-class{
     height: 208px;
-    width: 345px;
+    width: 300px;
     background-color: #13e8e4;
     flow-y: scroll;
     position: relative;
@@ -253,8 +253,8 @@ bottom:100px
 
     .moves-list-class{
         position: relative;
-        top: -550px;
-        left: -110px
+        top: -480px;
+        left: -80px
     }
     .specialist-info{
         display:none;
@@ -265,7 +265,7 @@ bottom:100px
 
 .stat-bar{
     bottom:26px;
-    left: -50px;
+    left: -30px;
    
     }
 }

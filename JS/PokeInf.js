@@ -464,13 +464,14 @@ async function Show_that_pokemon() {
         const num = Move.version_group_details.length
         let movemethod = Move.version_group_details[num - 1].move_learn_method.name;
         const learnmove = Move.version_group_details[num - 1].level_learned_at
-
+        let movename = Move.move.name
         if (movemethod == "machine") {
           movemethod = "TM"
         }
-        li.innerText = Move.move.name + ":" + movemethod + "," + learnmove
+        li.innerText = movename + ":" + movemethod + "," + learnmove
         moveslist.appendChild(li)
         li.style.textAlign = "center"
+        
      
       }
 

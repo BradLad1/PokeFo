@@ -93,7 +93,7 @@ left: 20px;}
     background-color: #13e8e4;
     overflow-y: scroll;
     position: relative;
-    top: -170px;
+    top: -40px;
     left: 160px;
     border-radius: 2.8%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -127,7 +127,7 @@ left: 20px;}
     height: 323px;
     position: relative;
     left: 230px;
-    bottom: 190px;
+    bottom: 50px;
     border-radius: 5%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     font-size:12px

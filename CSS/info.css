@@ -8,7 +8,12 @@ body{
  /*    overflow-X:scroll;*/ 
     background-color: rgb(255, 255, 107)
 }
-
+.idtext{
+  position: absolute;
+  top: 54px;
+  left: 225px;
+  font-weight: 900;
+}
 
 
 .top-part{
@@ -54,8 +59,8 @@ body{
     border: none;
     border-radius: 70%;
     height: 105px;
-    top: 30px;
-    left: 223px;
+    top: 430px;
+    left: 253px;
     background-color: white;
     font-size: 18px;
     padding-right: 23px;
@@ -76,7 +81,7 @@ body{
     outline: none;
     border: none;
     border-radius: 20%;
-    top: 450px;
+    top: 250px;
     left: -80px;
     background-color: white;
     font-size: 18px;
@@ -100,8 +105,8 @@ body{
     border: none;
     border-radius: 70%;
     height: 105px;
-    bottom: 90px;
-    left: 110px;
+    top: 570px;
+    left: 260px;
     background-color: white;
     font-size: 18px;
     padding: 2px 12px;
@@ -133,8 +138,8 @@ body{
 }
 .iconsection {
   position: absolute;
-  top:25px;
-  left: 125px;
+  top:125px;
+  left: 205px;
   transform: scale(.81); /* Corrected to use transform */
 }
 
@@ -332,14 +337,12 @@ body{
       left: 30px;
       width: 320px;
     }
-  
     .idtext {
-      position: absolute;
-      top: 75px;
-      left:159px;
-      font-weight: 900;
+      position: absolute !important;
+      top: 75px !important;
+      left: 164px !important;
+      font-weight: 900 !important;
     }
-  
     .bottom-part {
       position: absolute;
       top: 348px;

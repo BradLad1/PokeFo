@@ -228,7 +228,14 @@ bottom:100px
         top:400px;    
         cursor:pointer
     }
-    
+    .weight{
+        top:75px
+    }
+    .Held-item{
+     
+        top: 140px;
+        left: 180px;
+    }
     .LeftArrow{
         position:relative;
         left:240px;
@@ -244,13 +251,10 @@ bottom:100px
     
     .RightArrow:active{
         /*Going to be used for the clicking colour*/
-       
         opacity:10.2%;
-        
     }
 
     .moves-list-class{
-    
      display:none
     }
 
@@ -262,10 +266,15 @@ bottom:100px
     .specialist-info{
         display:none;
         bottom: 570px;
-        left: 0px
+        left: 0px;
+        width:340px;
+        height:305px;
         }
 
-
+        .poke-type{
+            top:165px;
+            left:10px
+        }
 .stat-bar{
     bottom:26px;
     left: -30px;

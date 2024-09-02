@@ -193,9 +193,7 @@ async function Show_that_pokemon() {
     chosenpokemon = Math.ceil(Math.random() * 1026)
     console.log(chosenpokemon)
     poke_search_btn.textContent = "Choosing Random"
-    console.log('Choosing Random');
     lastclicked = ""
-    console.log(showpokemon)
 
   }
   try {
@@ -240,7 +238,6 @@ async function Show_that_pokemon() {
     Idnumber.textContent="ID:"+idval
     //section for idnumber
 
-    console.log(data)
     //get the image
     let Img = document.createElement("img")
     pokeicon.appendChild(Img)
@@ -266,7 +263,6 @@ async function Show_that_pokemon() {
 
     // Update the HTML element with the capitalized name
     pokemonName.innerText = capitalizedPokemonName;
-    console.log(capitalizedPokemonName); // Output the final name for verification
     //POKENAME
 
 
@@ -279,7 +275,6 @@ async function Show_that_pokemon() {
       li.style.color = "white";
       li.style.fontSize = "20px"
       abilitylist.appendChild(li);
-      console.log(abilityname)
     })
     //Get abilites
 
@@ -362,7 +357,6 @@ async function Show_that_pokemon() {
     //progress section 
     /*How this code section will work is that it will get the total base total of a pokemon's stats then after that
     will give the percentage that each stat makes on the base stat and it will show it on a progress bar*/
-    console.log(data.stats)
     data.stats.forEach(stats => {
       const added_stat = stats.base_stat //getting the base stat
       stat_list.push(added_stat)
@@ -373,7 +367,6 @@ async function Show_that_pokemon() {
     })
 
     for (let i = 0; i < stat_list.length; i++) {
-      console.log(stat_list[i] + "stat"); // Log the value in stat_list at index i along with "stat"
 
 
       switch (i) {
@@ -403,12 +396,10 @@ async function Show_that_pokemon() {
     }
 
 
-    console.log(stat_list)
-    console.log(base_total)
+  
     for (let i = 0; i < stat_list.length; i++) {
     const percent_of_stat = stat_list[i] / base_total * 100;
     const  roundnum = percent_of_stat.toFixed(2);
-      console.log(roundnum);
 
       // Get the corresponding stat element based on the loop index
       let statElement;
@@ -443,14 +434,13 @@ async function Show_that_pokemon() {
     //HELD ITEMS
     data.held_items.forEach(Helditem => {
       const li = document.createElement("li")
-      li.innerText = Helditem.item.name
-      li.style.color = "white"
-      li.style.fontWeight = "900"
-      li.style.fontSize = "20px"
-      if (li.innerText == "") {
-
-        li.innerText = "None"
-      }
+     
+   
+        li.innerText = Helditem.item.name
+        li.style.color = "white"
+        li.style.fontWeight = "900"
+        li.style.fontSize = "20px"
+      
       Helditems.appendChild(li)
     })
 

@@ -10,7 +10,7 @@ body{
 }
 .idtext{
   position: absolute;
-  top: 54px;
+  top: 60px;
   left: 225px;
   font-weight: 900;
 }
@@ -81,7 +81,7 @@ body{
     outline: none;
     border: none;
     border-radius: 20%;
-    top: 250px;
+    top: 20px;
     left: -80px;
     background-color: white;
     font-size: 18px;
@@ -317,9 +317,9 @@ body{
   /* Specific adjustments for even smaller screens (less than 400px, very small phones) */
   @media (max-width:400px) {
     body {
-      /* background-color: rgb(255, 255, 107);
+       background-color: rgb(255, 255, 107);
      height:400px;
-     width:400px;*/
+     width:400px;
       overflow:hidden
      }
     h1.BigText {
@@ -339,13 +339,13 @@ body{
     }
     .idtext {
       position: absolute !important;
-      top: 75px !important;
+      top: 70px !important;
       left: 164px !important;
       font-weight: 900 !important;
     }
     .bottom-part {
       position: absolute;
-      top: 348px;
+      top: 347px;
       left: 30px;
       width: 320px;
     }
@@ -369,7 +369,7 @@ body{
 
     .iconsection {
       position: relative;
-      top:-520px;
+      top:-500px;
       left: 125px;
       transform: scale(0.85); /* Corrected to use transform */
     } 
@@ -428,8 +428,6 @@ body{
     border-radius: 100%;
     width:75px;
     height:75px;
-  
-  
     padding: 5px 7px;
     }
     

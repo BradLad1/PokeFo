@@ -369,9 +369,9 @@ body{
 
     .iconsection {
       position: relative;
-      top:-500px;
+      top:-510px;
       left: 125px;
-      transform: scale(0.85); /* Corrected to use transform */
+      transform: scale(0.8); /* Corrected to use transform */
     } 
     
       

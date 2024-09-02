@@ -432,18 +432,24 @@ async function Show_that_pokemon() {
       }
     }
     //HELD ITEMS
-    data.held_items.forEach(Helditem => {
-      const li = document.createElement("li")
-     
-   
-        li.innerText = Helditem.item.name
-        li.style.color = "white"
-        li.style.fontWeight = "900"
-        li.style.fontSize = "20px"
-      
-      Helditems.appendChild(li)
-    })
-
+    if (data.held_items.length === 0) {
+      const li = document.createElement("li");
+      li.innerText = "None";
+      li.style.color = "white";
+      li.style.fontWeight = "900";
+      li.style.fontSize = "20px";
+      Helditems.appendChild(li);
+    } else {
+      data.held_items.forEach(Helditem => {
+        const li = document.createElement("li");
+        li.innerText = Helditem.item.name;
+        li.style.color = "white";
+        li.style.fontWeight = "900";
+        li.style.fontSize = "20px";
+        Helditems.appendChild(li);
+      });
+    }
+    
     //HELD ITEMS
 
     //MOVES
@@ -593,12 +599,12 @@ function resetPokemonInfo() {
   pokeball_red_Storage.innerHTML = '<img src="./imgs/poketop.png" class="img-fluid top-part" width="600px" id="poketop-red" alt="top">'
   pokeball_white_Storage.innerHTML = '<img src="./imgs/pokebottom.png" class="img-fluid bottom-part"  width="600px" alt="bottom">'
   pokeicon.innerHTML = ""; // Clear the pokemon icon
-  abilitylist.innerHTML = '<span class="poppins-medium"><b style="font-size: 24px; text-decoration: underline;">Abilities</b></span>'
-  poketype.innerHTML = '<p style="font-size: 24px;text-decoration: underline; font-weight: 900;" class="poppins-medium"><b>Types</b></p>'; // Clear the pokemon types
+  abilitylist.innerHTML = '<span class="poppins-medium"><b style=" text-decoration: underline;">Abilities</b></span>'
+  poketype.innerHTML = '<p style="text-decoration: underline; font-weight: 900;" class="poppins-medium"><b>Types</b></p>'; // Clear the pokemon types
   baseaddtotal.innerText = ""; // Reset base total text
   base_total = 0; // Reset base total
   stat_list = []; // Clear stat list
-  Helditems.innerHTML = '<p style="font-size: 24px; text-decoration: underline;" class="poppins-medium"><b>Held Items</b></p>'
+  Helditems.innerHTML = '<p style=" text-decoration: underline;" class="poppins-medium"><b>Held Items</b></p>'
   num_hp.textContent = "";
   num_atk.textContent = "";
   num_def.textContent = "";
@@ -611,11 +617,11 @@ function resetPokemonInfo() {
   special_atk.style.width = "0%";
   special_def.style.width = "0%";
   speed.style.width = "0%";
-  WeightOfPokemon.innerHTML = '<p style="font-size: 24px; text-decoration: underline;" class="poppins-medium"><b>Weight</b></p>'; // Clear weight
+  WeightOfPokemon.innerHTML = '<p style=" text-decoration: underline;" class="poppins-medium"><b>Weight</b></p>'; // Clear weight
   origin_game.textContent = ""; // Clear origin game
   spanHolderForbtn.innerHTML = "" //clear button
   RandomBtn.style.display = "inline"
-  moveslist.innerHTML = '<p style=" text-align: center;font-size: 28px; margin: 0; padding: 0; text-decoration: underline;"><b>Moves</b></p>'
+  moveslist.innerHTML = '<p style=" text-align: center; margin: 0; padding: 0; text-decoration: underline;"><b>Moves</b></p>'
   dexbody.classList.remove("dex-body");
   dexbody.classList.remove("anim-square");
   dexbody.classList.add("hide-away");

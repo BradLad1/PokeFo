@@ -12,6 +12,13 @@ h1{
  li{
      font-size: 25px;
  }
+
+.genartioninfo{
+    position:absolute;
+    left:30px;
+    top:17px;
+    line-height: 1.2; 
+}
 .stat-bar{
 position: absolute;
 bottom:-56px;
@@ -25,7 +32,9 @@ height: 22px;
 border-radius: 15px;
 position: relative;
 }
-
+.moves-list-class,.weight,.Held-item,.abilites-section,.genartioninfo,.poke-type {
+    font-size: 25px !important;
+}
 .statValue{
     position: absolute ;
     left:350px;
@@ -54,9 +63,9 @@ position: relative;
 }
 
 
-.genartioninfo{
+.generationinfo{
 position: absolute;
-bottom:  220px;
+bottom:  200px;
 left: 20px;}
 
 /*Abilites List*/
@@ -76,7 +85,7 @@ left: 20px;}
 /*Held Item*/
 .Held-item{
     position: absolute;
-    top: 210px;
+    top: 180px;
     left: 330px;
     display: block;
     margin: 0;
@@ -101,9 +110,6 @@ left: 20px;}
 
 }
 
-.moves-list-class, .weight, .Held-item, .abilites-section, .genartioninfo, .poke-type{
-    font-size:22px
-}
 
 
 .weight{
@@ -211,17 +217,30 @@ bottom:100px
 }
 
 @media (max-width: 400px)  {
-
+    /*This is for the mobile version of the code */
     .arrowbtns{
         position:relative;
        scale: 0.32;
        top:56px
       
     }
-    .moves-list-class, .weight, .Held-item, .abilites-section, .genartioninfo, .poke-type{
-        font-size:17px
+    .moves-list-class,.weight,.Held-item,.abilites-section,.genartioninfo,.poke-type {
+        font-size: 17px !important;
     }
-    
+    .abilites-section{
+        top:64px;
+        left:160px
+    }
+    .genartioninfo{
+        position:absolute;
+        left:70px;
+        top:5px;
+        line-height: 1.2; 
+    }
+    .genartioninfo p{
+        position:relative;
+        left:9px;
+    }
     .RightArrow{
         position:relative;
         left:-57px;
@@ -229,12 +248,16 @@ bottom:100px
         cursor:pointer
     }
     .weight{
-        top:75px
+        top:65px
     }
     .Held-item{
-     
-        top: 140px;
-        left: 180px;
+        line-height: .009; 
+        top: 189px;
+        left: 170px;
+    }
+     li{
+        font-size:15px !important;
+        line-height: 1.439; 
     }
     .LeftArrow{
         position:relative;
@@ -265,15 +288,15 @@ bottom:100px
     }
     .specialist-info{
         display:none;
-        bottom: 570px;
+        bottom: 485px;
         left: 0px;
-        width:340px;
-        height:305px;
+        width:290px;
+        height:252px;
         }
 
         .poke-type{
-            top:165px;
-            left:10px
+            top:150px;
+            left:5px
         }
 .stat-bar{
     bottom:26px;

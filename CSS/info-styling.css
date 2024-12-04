@@ -12,6 +12,13 @@ h1{
  li{
      font-size: 25px;
  }
+
+.genartioninfo{
+    position:absolute;
+    left:30px;
+    top:17px;
+    line-height: 1.2; 
+}
 .stat-bar{
 position: absolute;
 bottom:-56px;
@@ -25,7 +32,9 @@ height: 22px;
 border-radius: 15px;
 position: relative;
 }
-
+.moves-list-class,.weight,.Held-item,.abilites-section,.genartioninfo,.poke-type {
+    font-size: 25px !important;
+}
 .statValue{
     position: absolute ;
     left:350px;
@@ -52,16 +61,11 @@ position: relative;
     font-weight: 400;
     font-style: normal;
 }
-  
-.icon{
-    position: relative;
-    top:65px;
-    left: 205px;
-}
 
-.genartioninfo{
+
+.generationinfo{
 position: absolute;
-bottom:  220px;
+bottom:  200px;
 left: 20px;}
 
 /*Abilites List*/
@@ -81,7 +85,7 @@ left: 20px;}
 /*Held Item*/
 .Held-item{
     position: absolute;
-    top: 210px;
+    top: 180px;
     left: 330px;
     display: block;
     margin: 0;
@@ -98,14 +102,13 @@ left: 20px;}
     background-color: #13e8e4;
     overflow-y: scroll;
     position: relative;
-    top: -160px;
+    top: -40px;
     left: 160px;
     border-radius: 2.8%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     animation:MoveScroll 10s ease-out  forwards normal;
 
 }
-
 
 
 
@@ -130,16 +133,16 @@ left: 20px;}
     height: 323px;
     position: relative;
     left: 230px;
-    bottom: 175px;
+    bottom: 50px;
     border-radius: 5%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-
+    font-size:12px
 }
 
 
 /*spefic info*/
 
-@media  screen and (max-width: 590px) and (orientation: portrait) and (hover: none) and (pointer: coarse) {
+@media  screen and (max-width: 590px)  {
 
 
 .arrowbtns{
@@ -151,95 +154,153 @@ left: 20px;}
 
 .RightArrow{
     position:relative;
-    left:-50px;
+    left:-66px;
     top:260px;    
     cursor:pointer
 }
 
 .LeftArrow{
     position:relative;
-    left:200px;
+    left:205px;
     top:260px;
     cursor:pointer
 }
 
 .LeftArrow:active{
     /*Going to be used for the clicking colour*/
-    background-color:white;
-    opacity:10.2%;
+    opacity:0.2%;
     
 }
 .specialist-info{
-width:500px
+display:none;
+width:340px;
+height:305px;
+left: 1px;
+bottom:100px
 }
+
+
 
 .RightArrow:active{
     /*Going to be used for the clicking colour*/
-    background-color:white;
-    opacity:10.2%;
+    opacity:0.2%;
     
 }
 
 .stat-bar{
-    
     transform:scale(0.69)
-    }
+}
+
+.Held-item{
+    position: absolute;
+    top: 210px;
+    left: 180px;
+}
+
+.abilites-section{
+    left:190px
+}
 
 
 .moves-list-class{
     height: 208px;
-    width: 345px;
+    width: 300px;
     background-color: #13e8e4;
-    overflow-y: scroll;
+    flow-y: scroll;
     position: relative;
     top: -70px;
     left: -90px;
    
 }
 
+
 }
 
-@media  screen and (max-width: 400px) and (orientation: portrait) and (hover: none) and (pointer: coarse) {
-
+@media (max-width: 400px)  {
+    /*This is for the mobile version of the code */
     .arrowbtns{
         position:relative;
-       scale: 0.35;
-       top:30px
+       scale: 0.32;
+       top:56px
       
     }
-    
+    .moves-list-class,.weight,.Held-item,.abilites-section,.genartioninfo,.poke-type {
+        font-size: 17px !important;
+    }
+    .abilites-section{
+        top:64px;
+        left:160px
+    }
+    .genartioninfo{
+        position:absolute;
+        left:70px;
+        top:5px;
+        line-height: 1.2; 
+    }
+    .genartioninfo p{
+        position:relative;
+        left:9px;
+    }
     .RightArrow{
         position:relative;
-        left:-50px;
-        top:260px;    
+        left:-57px;
+        top:400px;    
         cursor:pointer
     }
-    
+    .weight{
+        top:65px
+    }
+    .Held-item{
+        line-height: .009; 
+        top: 189px;
+        left: 170px;
+    }
+     li{
+        font-size:15px !important;
+        line-height: 1.439; 
+    }
     .LeftArrow{
         position:relative;
-        left:200px;
-        top:260px;
+        left:240px;
+        top:117px;
         cursor:pointer
     }
     
     .LeftArrow:active{
         /*Going to be used for the clicking colour*/
-        background-color:white;
         opacity:10.2%;
         
     }
     
     .RightArrow:active{
         /*Going to be used for the clicking colour*/
-        background-color:white;
         opacity:10.2%;
-        
     }
 
     .moves-list-class{
      display:none
     }
+
+    .moves-list-class{
+        position: relative;
+        top: -480px;
+        left: -80px
+    }
     .specialist-info{
-        display:none
+        display:none;
+        bottom: 485px;
+        left: 0px;
+        width:290px;
+        height:252px;
         }
+
+        .poke-type{
+            top:150px;
+            left:5px
+        }
+.stat-bar{
+    bottom:26px;
+    left: -30px;
+   
+    }
 }

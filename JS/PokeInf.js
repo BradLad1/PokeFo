@@ -119,83 +119,63 @@ poke_search_btn.addEventListener("keypress", function(event) {
 const pokebutton = document.getElementById("poke-btn") //used to get the input field
 //===============VARIABLES =================
 
-
 function Arrownbtns(ArrowClass, RightArrowClass, LeftArrowClass) {
-  // Function to handle arrow buttons based on window width
   function handleArrowButtons() {
-    let displayValue = 0; // Initialize displayValue to track which content to display
-    const statbar = document.querySelector(".stat-bar"); // Corrected selector for stat bar
-    const specialistinfo = document.querySelector(".specialist-info"); // Corrected selector for specialist info
-    const windowWidth = window.innerWidth; // Get the current window width
+    let displayValue = 0;
+    const statbar = document.querySelector(".stat-bar");
+    const specialistinfo = document.querySelector(".specialist-info");
+    const windowWidth = window.innerWidth;
 
-    // Check if the window width is 590 pixels or less
-    if (windowWidth <= 590 || windowWidth <=400) {
-      // If the arrows don't already exist, create and append them
-      if (!LeftarrowStorageSpan.querySelector("img")) {
+    if (windowWidth <= 590) { // Only one condition needed here
+      // Check if arrows are already created
+      if (!LeftarrowStorageSpan.querySelector("img") && !RightarrowStorageSpan.querySelector("img")) {
         const LeftArrow = document.createElement("img");
         LeftArrow.src = "imgs/LeftArrow.png";
+        LeftArrow.classList.add(ArrowClass, LeftArrowClass);
         LeftarrowStorageSpan.appendChild(LeftArrow);
 
         const RightArrow = document.createElement("img");
-        RightArrow.src = 'imgs/RightArrow.png';
+        RightArrow.src = "imgs/RightArrow.png";
+        RightArrow.classList.add(ArrowClass, RightArrowClass);
         RightarrowStorageSpan.appendChild(RightArrow);
 
-        // Add the specified classes to the arrows
-        LeftArrow.classList.add(ArrowClass, LeftArrowClass);
-        RightArrow.classList.add(ArrowClass, RightArrowClass);
-
-        // Function to update content display based on displayValue
         function updateDisplay() {
-          switch (displayValue) {
-            case 0:
-              statbar.style.display = "block";
-              moveslist.style.display = "none";
-              specialistinfo.style.display = "none";
-              break;
-            case 1:
-              statbar.style.display = "none";
-              specialistinfo.style.display = "block";
-              moveslist.style.display = "none";
-              break;
-            case 2:
-              specialistinfo.style.display = "none";
-              moveslist.style.display = "block";
-              statbar.style.display = "none";
-              break;
-          }
-          if(windowWidth >=590){
-            resetPokemonInfo()
+          if (windowWidth <= 590) {
+            // Hide or show content based on displayValue
+            statbar.style.display = displayValue === 0 ? "block" : "none";
+            specialistinfo.style.display = displayValue === 1 ? "block" : "none";
+            moveslist.style.display = displayValue === 2 ? "block" : "none";
+          } else {
+            resetPokemonInfo(); // Ensure everything is visible on larger screens
           }
         }
 
-        // Initial call to set the default display
-        updateDisplay();
+        updateDisplay(); // Initial display
 
-        // Add click event listeners to the arrows
         LeftArrow.addEventListener("click", function () {
-          displayValue = (displayValue - 1 + 3) % 3; // Ensure the value wraps around
+          displayValue = (displayValue - 1 + 3) % 3; // Decrement with wrap-around
           updateDisplay();
         });
 
         RightArrow.addEventListener("click", function () {
-          displayValue = (displayValue + 1) % 3; // Ensure the value wraps around
+          displayValue = (displayValue + 1) % 3; // Increment with wrap-around
           updateDisplay();
         });
       }
     } else {
-      // If the window width is greater than 590 pixels, remove the arrows
+      // Reset and remove arrows if window width exceeds 590px
       LeftarrowStorageSpan.innerHTML = "";
       RightarrowStorageSpan.innerHTML = "";
-      moveslist.style.display ="block";
-      specialistinfo.style.display ="block";
-      statbar.style.display ="block";
+      statbar.style.display = "block";
+      specialistinfo.style.display = "block";
+      moveslist.style.display = "block";
     }
   }
 
-  // Call the function initially and on resize events
-  handleArrowButtons();
-  window.addEventListener('resize', handleArrowButtons);
+  handleArrowButtons(); // Initial call
+  window.addEventListener('resize', handleArrowButtons); // Update on resize
 }
+
 
 
 
@@ -213,9 +193,7 @@ async function Show_that_pokemon() {
     chosenpokemon = Math.ceil(Math.random() * 1026)
     console.log(chosenpokemon)
     poke_search_btn.textContent = "Choosing Random"
-    console.log('Choosing Random');
     lastclicked = ""
-    console.log(showpokemon)
 
   }
   try {
@@ -260,7 +238,6 @@ async function Show_that_pokemon() {
     Idnumber.textContent="ID:"+idval
     //section for idnumber
 
-    console.log(data)
     //get the image
     let Img = document.createElement("img")
     pokeicon.appendChild(Img)
@@ -286,7 +263,6 @@ async function Show_that_pokemon() {
 
     // Update the HTML element with the capitalized name
     pokemonName.innerText = capitalizedPokemonName;
-    console.log(capitalizedPokemonName); // Output the final name for verification
     //POKENAME
 
 
@@ -299,7 +275,6 @@ async function Show_that_pokemon() {
       li.style.color = "white";
       li.style.fontSize = "20px"
       abilitylist.appendChild(li);
-      console.log(abilityname)
     })
     //Get abilites
 
@@ -382,7 +357,6 @@ async function Show_that_pokemon() {
     //progress section 
     /*How this code section will work is that it will get the total base total of a pokemon's stats then after that
     will give the percentage that each stat makes on the base stat and it will show it on a progress bar*/
-    console.log(data.stats)
     data.stats.forEach(stats => {
       const added_stat = stats.base_stat //getting the base stat
       stat_list.push(added_stat)
@@ -393,7 +367,6 @@ async function Show_that_pokemon() {
     })
 
     for (let i = 0; i < stat_list.length; i++) {
-      console.log(stat_list[i] + "stat"); // Log the value in stat_list at index i along with "stat"
 
 
       switch (i) {
@@ -423,12 +396,10 @@ async function Show_that_pokemon() {
     }
 
 
-    console.log(stat_list)
-    console.log(base_total)
+  
     for (let i = 0; i < stat_list.length; i++) {
     const percent_of_stat = stat_list[i] / base_total * 100;
     const  roundnum = percent_of_stat.toFixed(2);
-      console.log(roundnum);
 
       // Get the corresponding stat element based on the loop index
       let statElement;
@@ -461,19 +432,24 @@ async function Show_that_pokemon() {
       }
     }
     //HELD ITEMS
-    data.held_items.forEach(Helditem => {
-      const li = document.createElement("li")
-      li.innerText = Helditem.item.name
-      li.style.color = "white"
-      li.style.fontWeight = "900"
-      li.style.fontSize = "20px"
-      if (li.innerText == "") {
-
-        li.innerText = "None"
-      }
-      Helditems.appendChild(li)
-    })
-
+    if (data.held_items.length === 0) {
+      const li = document.createElement("li");
+      li.innerText = "None";
+      li.style.color = "white";
+      li.style.fontWeight = "900";
+      li.style.fontSize = "20px";
+      Helditems.appendChild(li);
+    } else {
+      data.held_items.forEach(Helditem => {
+        const li = document.createElement("li");
+        li.innerText = Helditem.item.name;
+        li.style.color = "white";
+        li.style.fontWeight = "900";
+        li.style.fontSize = "20px";
+        Helditems.appendChild(li);
+      });
+    }
+    
     //HELD ITEMS
 
     //MOVES
@@ -484,13 +460,14 @@ async function Show_that_pokemon() {
         const num = Move.version_group_details.length
         let movemethod = Move.version_group_details[num - 1].move_learn_method.name;
         const learnmove = Move.version_group_details[num - 1].level_learned_at
-
+        let movename = Move.move.name
         if (movemethod == "machine") {
           movemethod = "TM"
         }
-        li.innerText = Move.move.name + ":" + movemethod + "," + learnmove
+        li.innerText = movename + ":" + movemethod + "," + learnmove
         moveslist.appendChild(li)
         li.style.textAlign = "center"
+        
      
       }
 
@@ -622,12 +599,12 @@ function resetPokemonInfo() {
   pokeball_red_Storage.innerHTML = '<img src="./imgs/poketop.png" class="img-fluid top-part" width="600px" id="poketop-red" alt="top">'
   pokeball_white_Storage.innerHTML = '<img src="./imgs/pokebottom.png" class="img-fluid bottom-part"  width="600px" alt="bottom">'
   pokeicon.innerHTML = ""; // Clear the pokemon icon
-  abilitylist.innerHTML = '<span class="poppins-medium"><b style="font-size: 24px; text-decoration: underline;">Abilities</b></span>'
-  poketype.innerHTML = '<p style="font-size: 24px;text-decoration: underline; font-weight: 900;" class="poppins-medium"><b>Types</b></p>'; // Clear the pokemon types
+  abilitylist.innerHTML = '<span class="poppins-medium"><b style=" text-decoration: underline;">Abilities</b></span>'
+  poketype.innerHTML = '<p style="text-decoration: underline; font-weight: 900;" class="poppins-medium"><b>Types</b></p>'; // Clear the pokemon types
   baseaddtotal.innerText = ""; // Reset base total text
   base_total = 0; // Reset base total
   stat_list = []; // Clear stat list
-  Helditems.innerHTML = '<p style="font-size: 24px; text-decoration: underline;" class="poppins-medium"><b>Held Items</b></p>'
+  Helditems.innerHTML = '<p style=" text-decoration: underline;" class="poppins-medium"><b>Held Items</b></p>'
   num_hp.textContent = "";
   num_atk.textContent = "";
   num_def.textContent = "";
@@ -640,11 +617,11 @@ function resetPokemonInfo() {
   special_atk.style.width = "0%";
   special_def.style.width = "0%";
   speed.style.width = "0%";
-  WeightOfPokemon.innerHTML = '<p style="font-size: 24px; text-decoration: underline;" class="poppins-medium"><b>Weight</b></p>'; // Clear weight
+  WeightOfPokemon.innerHTML = '<p style=" text-decoration: underline;" class="poppins-medium"><b>Weight</b></p>'; // Clear weight
   origin_game.textContent = ""; // Clear origin game
   spanHolderForbtn.innerHTML = "" //clear button
   RandomBtn.style.display = "inline"
-  moveslist.innerHTML = '<p style=" text-align: center;font-size: 28px; margin: 0; padding: 0; text-decoration: underline;"><b>Moves</b></p>'
+  moveslist.innerHTML = '<p style=" text-align: center; margin: 0; padding: 0; text-decoration: underline;"><b>Moves</b></p>'
   dexbody.classList.remove("dex-body");
   dexbody.classList.remove("anim-square");
   dexbody.classList.add("hide-away");
